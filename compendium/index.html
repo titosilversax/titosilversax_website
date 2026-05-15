@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Saxophonist's Compendium — Tito Silversax</title>
+  <meta name="description" content="A deep guide to harmonic physics, world tuning systems, sacred geometry, and spiritual practice for the serious saxophonist. By Tito Silversax (Alberto Martir). PDF & EPUB. $27.">
+  <meta property="og:title" content="The Saxophonist's Compendium — Tito Silversax">
+  <meta property="og:description" content="Everything I found after years of obsessive research into sound, tuning, and sacred practice. PDF & EPUB. $27.">
+  <meta property="og:image" content="https://titosilversax.com/images/compendium-cover.png">
+  <meta property="og:url" content="https://titosilversax.com/compendium">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ============================================================
+       META PIXEL — replace YOUR_META_PIXEL_ID with your actual ID
+       ============================================================ -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_META_PIXEL_ID');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_META_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- ============================================================
+       GOOGLE TAG MANAGER — replace GTM-XXXXXXX with your actual ID
+       ============================================================ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Kit Commerce -->
+  <script src="https://titosilversax.kit.com/commerce.js" async defer></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #06070f;
+      --surface:     #0b0e1c;
+      --surface-2:   #111829;
+      --blue:        #1e3a8a;
+      --blue-glow:   rgba(59, 130, 246, 0.12);
+      --purple:      #4c1d95;
+      --purple-glow: rgba(139, 92, 246, 0.14);
+      --emerald:     #064e3b;
+      --emerald-glow:rgba(16, 185, 129, 0.1);
+      --gold:        #c9963a;
+      --gold-bright: #e8b94f;
+      --gold-glow:   rgba(201, 150, 58, 0.25);
+      --text:        #dde4f2;
+      --text-muted:  #8898b8;
+      --divider:     rgba(139, 92, 246, 0.22);
+      --ff-head:     'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --ff-body:     'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse 90% 55% at 50% 0%,   rgba(30, 58, 138, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 70% 50% at 10% 60%,  rgba(76, 29, 149, 0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 90% 80%,  rgba(6, 78, 59, 0.12)   0%, transparent 60%);
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--divider), transparent);
+      margin: 60px 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 64px 0 40px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--ff-body);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .cover-wrap {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 44px;
+    }
+
+    .cover-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -18px;
+      border-radius: 4px;
+      background: radial-gradient(ellipse at center, var(--purple-glow) 0%, transparent 70%);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .cover-img {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 3px;
+      box-shadow:
+        0 0 0 1px rgba(139, 92, 246, 0.18),
+        0 8px 32px rgba(0,0,0,0.6),
+        0 32px 80px rgba(0,0,0,0.4);
+      position: relative;
+    }
+
+    .hero-headline {
+      font-family: var(--ff-head);
+      font-size: clamp(2.1rem, 6vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: #eef1fb;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-family: var(--ff-head);
+      font-size: clamp(1.05rem, 3vw, 1.3rem);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    /* ── CTA BUTTON ── */
+    .cta-wrap {
+      text-align: center;
+      margin: 8px 0;
+    }
+
+    .convertkit-button,
+    a.convertkit-button {
+      display: inline-block !important;
+      background: linear-gradient(135deg, #b8862e 0%, #e0ac48 50%, #b8862e 100%) !important;
+      background-size: 200% 100% !important;
+      color: #0b0a06 !important;
+      font-family: var(--ff-body) !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.04em !important;
+      text-decoration: none !important;
+      padding: 16px 36px !important;
+      border-radius: 3px !important;
+      border: none !important;
+      cursor: pointer !important;
+      transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.15s ease !important;
+      box-shadow: 0 0 28px var(--gold-glow), 0 4px 16px rgba(0,0,0,0.4) !important;
+      width: 100% !important;
+      max-width: 360px !important;
+      text-align: center !important;
+    }
+
+    .convertkit-button:hover,
+    a.convertkit-button:hover {
+      background-position: 100% 0 !important;
+      box-shadow: 0 0 44px var(--gold-glow), 0 6px 24px rgba(0,0,0,0.5) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .cta-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── WHO I AM ── */
+    .section { padding: 8px 0; }
+
+    .section-label {
+      font-family: var(--ff-body);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .section-heading {
+      font-family: var(--ff-head);
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: #eef1fb;
+      margin-bottom: 24px;
+    }
+
+    .section-body {
+      color: var(--text);
+      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+      line-height: 1.8;
+    }
+
+    .section-body p + p { margin-top: 18px; }
+
+    .section-body em {
+      font-style: italic;
+      color: #b8c8e8;
+    }
+
+    /* ── WHAT'S INSIDE ── */
+    .inside-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    .inside-item {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .inside-item:last-child { border-bottom: none; }
+
+    .inside-numeral {
+      font-family: var(--ff-head);
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--purple-glow);
+      color: rgba(139, 92, 246, 0.5);
+      line-height: 1.3;
+      padding-top: 2px;
+    }
+
+    .inside-title {
+      font-family: var(--ff-head);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #dde4f2;
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .inside-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── WHO IS THIS FOR ── */
+    .for-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+    }
+
+    .for-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 12px;
+      font-size: 0.98rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .for-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    /* ── PRICE BLOCK ── */
+    .price-block {
+      background: linear-gradient(135deg, var(--surface) 0%, #0f1428 100%);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 6px;
+      padding: 44px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-block::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(76, 29, 149, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .price-product-name {
+      font-family: var(--ff-head);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #eef1fb;
+      margin-bottom: 4px;
+    }
+
+    .price-amount {
+      font-family: var(--ff-head);
+      font-size: clamp(3rem, 10vw, 4.5rem);
+      font-weight: 600;
+      line-height: 1;
+      color: var(--gold-bright);
+      margin: 16px 0 6px;
+    }
+
+    .price-details {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 40px 0 60px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+      color: rgba(136, 152, 184, 0.6);
+      line-height: 1.7;
+    }
+
+    .footer-text a {
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(136, 152, 184, 0.3);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .footer-text a:hover {
+      color: var(--text);
+      border-color: var(--text-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 600px) {
+      .hero { padding: 80px 0 52px; }
+      .cover-img { max-width: 380px; }
+      .inside-grid { gap: 0; }
+    }
+
+    @media (min-width: 768px) {
+      .hero { padding: 96px 0 64px; }
+      .cover-img { max-width: 400px; }
+      .price-block { padding: 56px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GTM noscript — replace GTM-XXXXXXX -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="cover-wrap">
+        <img
+          class="cover-img"
+          src="/images/compendium-cover.jpg"
+          alt="The Saxophonist's Compendium book cover"
+          width="400"
+          height="520"
+        >
+      </div>
+
+      <h1 class="hero-headline">The Saxophone is Not&nbsp;a&nbsp;Machine.<br>It's a Portal.</h1>
+
+      <p class="hero-sub">
+        A guide for the saxophonist who suspects there is more — in the physics
+        of the horn, in the intervals between the notes, in the ancient traditions
+        that treated sound as a spiritual technology.
+      </p>
+
+      <div class="cta-wrap">
+        <a class="convertkit-button" href="https://titosilversax.kit.com/products/thesaxophonistscompendium" data-commerce>Get the Compendium — $27</a>
+        <p class="cta-note">PDF &amp; EPUB &nbsp;·&nbsp; Instant download &nbsp;·&nbsp; No DRM</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════
+       WHO I AM
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">About the author</span>
+      <h2 class="section-heading">Years of obsessive research.<br>One document.</h2>
+
+      <div class="section-body">
+        <p>
+          I am Alberto Martir — known in some circles as Tito Silversax. I am a soprano
+          saxophonist based in Cleveland, Ohio, and for years I have been consumed by a
+          single question: <em>what is actually happening when a saxophone speaks?</em>
+        </p>
+        <p>
+          The standard answers never satisfied me. I kept digging. Into the physics of
+          the harmonic series and what it reveals about intonation. Into the microtonality
+          embedded in Arabic maqamat, Turkish makam, Persian dastgah, and West African
+          tonal traditions. Into the sacred geometry that underlies both musical tuning
+          and the proportions of the natural world. Into Sufi writings on <em>sama</em>
+          — sound as a path to the divine. Into the Kabbalistic understanding of vibration
+          as a fundamental spiritual act.
+        </p>
+        <p>
+          The Saxophonist's Compendium is everything I found. Written for the player who
+          wants to understand, not just execute.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT'S INSIDE
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">What's inside</span>
+      <h2 class="section-heading">Six territories.<br>One integrated map.</h2>
+
+      <div class="inside-grid">
+
+        <div class="inside-item">
+          <span class="inside-numeral">I</span>
+          <div>
+            <h3 class="inside-title">The Harmonic Series</h3>
+            <p class="inside-desc">
+              Your saxophone is already playing everything. Every pitch contains within it
+              the entire universe of overtones — a built-in tuning guide that predates
+              Western notation by millennia. Learn to hear them, bend them, and play them
+              deliberately.
+            </p>
+          </div>
+        </div>
+
+        <div class="inside-item">
+          <span class="inside-numeral">II</span>
+          <div>
+            <h3 class="inside-title">Microtonality &amp; Alternate Fingerings</h3>
+            <p class="inside-desc">
+              Western notation divides the octave into 12 equal slices. The saxophone
+              doesn't care. This section maps the alternate fingerings that unlock the
+              pitches between the pitches — the notes your sheet music never told you
+              existed.
+            </p>
+          </div>
+        </div>
+
+        <div class="inside-item">
+          <span class="inside-numeral">III</span>
+          <div>
+            <h3 class="inside-title">World Tuning Systems</h3>
+            <p class="inside-desc">
+              Arabic maqamat. Turkish makam. Persian dastgah. West African tonal
+              traditions. These systems didn't fracture the octave arbitrarily — they
+              followed the harmonic series where it led. Here is how to apply their
+              logic to your instrument and your ear.
+            </p>
+          </div>
+        </div>
+
+        <div class="inside-item">
+          <span class="inside-numeral">IV</span>
+          <div>
+            <h3 class="inside-title">Sacred Geometry</h3>
+            <p class="inside-desc">
+              The mathematical ratios that structure musical intervals are the same ratios
+              that appear in the growth of living things, the proportions of ancient
+              architecture, and the movements of celestial bodies. This is not metaphor.
+              This is physics — and it changes how you understand what you are doing
+              when you play.
+            </p>
+          </div>
+        </div>
+
+        <div class="inside-item">
+          <span class="inside-numeral">V</span>
+          <div>
+            <h3 class="inside-title">Kabbalah &amp; Sufism</h3>
+            <p class="inside-desc">
+              Two mystical traditions with sophisticated, practical theories of sound as
+              spiritual technology. The Sufi concept of <em>sama</em> as divine audition.
+              The Kabbalistic understanding of vibration as intentional act. These
+              frameworks offer not mystification but a vocabulary for what serious
+              musicians already know: that something extraordinary can happen when you play.
+            </p>
+          </div>
+        </div>
+
+        <div class="inside-item">
+          <span class="inside-numeral">VI</span>
+          <div>
+            <h3 class="inside-title">An Integrated Practice</h3>
+            <p class="inside-desc">
+              Everything above converges in a practical approach to working on the horn.
+              Not scales as punishment — scales as a form of meditation. Not technique
+              as the goal — technique as a doorway. A daily practice that is simultaneously
+              music, physics, and prayer.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════
+       WHO IS THIS FOR
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Who this is for</span>
+      <h2 class="section-heading">You've heard something<br>the lesson books don't explain.</h2>
+
+      <ul class="for-list">
+        <li>You practice seriously and want to understand <em>why</em> the techniques work, not just how</li>
+        <li>You are drawn to world music traditions and want more than surface-level exposure</li>
+        <li>You have listened to Pharoah Sanders, John Coltrane, Yusef Lateef, or Jan Garbarek and wondered what they knew</li>
+        <li>You suspect that music and spirituality are the same thing, viewed from different angles</li>
+        <li>You want to go deeper</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════
+       PRICE + CTA
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="price-block">
+        <p class="price-product-name">The Saxophonist's Compendium</p>
+        <div class="price-amount">$27</div>
+        <p class="price-details">
+          PDF &amp; EPUB &nbsp;·&nbsp; Instant digital download<br>
+          No subscription &nbsp;·&nbsp; No DRM &nbsp;·&nbsp; Yours to keep
+        </p>
+        <div class="cta-wrap">
+          <a class="convertkit-button" href="https://titosilversax.kit.com/products/thesaxophonistscompendium" data-commerce>Get the Compendium — $27</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Secure checkout via Kit &nbsp;·&nbsp;
+        Questions? <a href="mailto:alberto@prismaticmusic.garden">alberto@prismaticmusic.garden</a><br>
+        &copy; 2025 Alberto Martir / Tito Silversax. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
