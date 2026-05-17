@@ -292,6 +292,29 @@
       line-height: 1.75;
     }
 
+    /* ── TABLE OF CONTENTS IMAGE ── */
+    .toc-wrap {
+      text-align: center;
+    }
+
+    .toc-img {
+      display: inline-block;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      border-radius: 4px;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(139, 92, 246, 0.08);
+    }
+
+    .toc-caption {
+      margin-top: 14px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
     /* ── WHO IS THIS FOR ── */
     .for-list {
       list-style: none;
@@ -564,6 +587,22 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════
+       TABLE OF CONTENTS
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">A look inside</span>
+      <h2 class="section-heading">What you're getting.</h2>
+      <div class="toc-wrap">
+        <img class="toc-img" src="/images/TOC.jpg" alt="Table of Contents — The Saxophonist's Compendium" width="560">
+        <p class="toc-caption">Table of Contents</p>
       </div>
     </div>
   </section>
