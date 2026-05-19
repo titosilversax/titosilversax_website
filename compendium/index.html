@@ -410,6 +410,71 @@
       border-color: var(--text-muted);
     }
 
+    /* ── AUDIO PLACEHOLDER ── */
+    .audio-section {
+      text-align: center;
+    }
+
+    .audio-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .audio-embed {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: linear-gradient(135deg, var(--surface) 0%, #0f1428 100%);
+      border: 1px solid rgba(139, 92, 246, 0.18);
+      border-radius: 4px;
+      padding: 20px 28px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .audio-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .audio-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: rgba(196, 167, 255, 0.8);
+      margin-left: 2px;
+    }
+
+    .audio-text {
+      text-align: left;
+    }
+
+    .audio-title {
+      font-family: var(--ff-head);
+      font-size: 1rem;
+      font-style: italic;
+      color: #dde4f2;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .audio-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+    }
+
     /* ── RESPONSIVE ── */
     @media (min-width: 600px) {
       .hero { padding: 80px 0 52px; }
@@ -450,9 +515,7 @@
       <h1 class="hero-headline">The Saxophone is Not&nbsp;a&nbsp;Machine.<br>It's a Portal.</h1>
 
       <p class="hero-sub">
-        A guide for the saxophonist who suspects there is more — in the physics
-        of the horn, in the intervals between the notes, in the ancient traditions
-        that treated sound as a spiritual technology.
+        You'll hear differently after this.<br>That's not a metaphor.
       </p>
 
       <div class="cta-wrap">
@@ -465,32 +528,36 @@
   <div class="divider"></div>
 
   <!-- ═══════════════════════════════════════════
-       WHO I AM
+       AUDIO
+       ═══════════════════════════════════════════ -->
+  <section class="audio-section">
+    <div class="container">
+      <span class="audio-label">Listen before you decide</span>
+      <!-- DROP YOUR AUDIO FILE IN /images/ AND UPDATE THE src BELOW -->
+      <div class="audio-embed">
+        <div class="audio-icon">
+          <svg viewBox="0 0 10 12" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,0 10,6 0,12"/>
+          </svg>
+        </div>
+        <div class="audio-text">
+          <span class="audio-title">A note from Tito Silversax</span>
+          <span class="audio-sub">Audio coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════
+       INTRO
        ═══════════════════════════════════════════ -->
   <section class="section">
     <div class="container">
-      <span class="section-label">About the author</span>
-      <h2 class="section-heading">Years of obsessive research.<br>One document.</h2>
-
       <div class="section-body">
-        <p>
-          I am Alberto Martir — known in some circles as Tito Silversax. I am a soprano
-          saxophonist based in Cleveland, Ohio, and for years I have been consumed by a
-          single question: <em>what is actually happening when a saxophone speaks?</em>
-        </p>
-        <p>
-          The standard answers never satisfied me. I kept digging. Into the physics of
-          the harmonic series and what it reveals about intonation. Into the microtonality
-          embedded in Arabic maqamat, Turkish makam, Persian dastgah, and West African
-          tonal traditions. Into the sacred geometry that underlies both musical tuning
-          and the proportions of the natural world. Into Sufi writings on <em>sama</em>
-          — sound as a path to the divine. Into the Kabbalistic understanding of vibration
-          as a fundamental spiritual act.
-        </p>
-        <p>
-          The Saxophonist's Compendium is everything I found. Written for the player who
-          wants to understand, not just execute.
-        </p>
+        <p>I'm Tito Silversax. Soprano saxophonist, Cleveland.</p>
+        <p>I spent years going deeper than the lesson books go. This is what I found.</p>
       </div>
     </div>
   </section>
@@ -511,12 +578,7 @@
           <span class="inside-numeral">I</span>
           <div>
             <h3 class="inside-title">The Harmonic Series</h3>
-            <p class="inside-desc">
-              Your saxophone is already playing everything. Every pitch contains within it
-              the entire universe of overtones — a built-in tuning guide that predates
-              Western notation by millennia. Learn to hear them, bend them, and play them
-              deliberately.
-            </p>
+            <p class="inside-desc">Your horn is already playing everything. You just can't hear it yet.</p>
           </div>
         </div>
 
@@ -524,12 +586,7 @@
           <span class="inside-numeral">II</span>
           <div>
             <h3 class="inside-title">Microtonality &amp; Alternate Fingerings</h3>
-            <p class="inside-desc">
-              Western notation divides 12 semitones equally inside an octave. There is
-              a radiant rainbow of color and soul within the notes between the notes.
-              This section divides the tones and offers a new prismatic color palette
-              to explore and radiate through your saxophone.
-            </p>
+            <p class="inside-desc">The notes between the notes — a prismatic palette hidden in plain sight.</p>
           </div>
         </div>
 
@@ -537,12 +594,7 @@
           <span class="inside-numeral">III</span>
           <div>
             <h3 class="inside-title">World Tuning Systems</h3>
-            <p class="inside-desc">
-              Arabic maqamat. Turkish makam. Persian dastgah. West African tonal
-              traditions. These systems didn't fracture the octave arbitrarily — they
-              followed the harmonic series where it led. Here is how to apply their
-              logic to your instrument and your ear.
-            </p>
+            <p class="inside-desc">Arabic, Turkish, Persian, West African. What happens when you follow the harmonic series all the way.</p>
           </div>
         </div>
 
@@ -550,13 +602,7 @@
           <span class="inside-numeral">IV</span>
           <div>
             <h3 class="inside-title">Sacred Geometry</h3>
-            <p class="inside-desc">
-              Sacred geometry is an ancient way of understanding symmetry and proportion.
-              Many patterns found in nature mirror the mathematics found in the Fibonacci
-              sequence — the Golden Ratio. The same ratios appear in the growth of living
-              things, the proportions of ancient architecture, and the movements of
-              celestial bodies.
-            </p>
+            <p class="inside-desc">The Fibonacci sequence. The Golden Ratio. The same mathematics lives in your music.</p>
           </div>
         </div>
 
@@ -564,13 +610,7 @@
           <span class="inside-numeral">V</span>
           <div>
             <h3 class="inside-title">Kabbalah &amp; Sufism</h3>
-            <p class="inside-desc">
-              Two mystical traditions with sophisticated, practical theories of sound as
-              spiritual technology. The Sufi concept of <em>sama</em> as divine audition.
-              The Kabbalistic understanding of vibration as intentional act. These
-              frameworks offer not mystification but a vocabulary for what serious
-              musicians already know: that something extraordinary can happen when you play.
-            </p>
+            <p class="inside-desc">Two traditions built entire philosophies around sound. Here's what they understood.</p>
           </div>
         </div>
 
@@ -578,12 +618,7 @@
           <span class="inside-numeral">VI</span>
           <div>
             <h3 class="inside-title">An Integrated Practice</h3>
-            <p class="inside-desc">
-              Musicianship as spiritual practice. Long tones as meditation. Intonation
-              and overtones as contemplative prayer. Intention and visualization of colors,
-              memories, and other facets of our inner life — beamed from our hearts
-              through the saxophone.
-            </p>
+            <p class="inside-desc">Long tones as meditation. Intonation as prayer. Playing as a portal.</p>
           </div>
         </div>
 
@@ -599,31 +634,10 @@
   <section class="section">
     <div class="container">
       <span class="section-label">A look inside</span>
-      <h2 class="section-heading">What you're getting.</h2>
       <div class="toc-wrap">
         <img class="toc-img" src="/images/TOC.jpg" alt="Table of Contents — The Saxophonist's Compendium" width="560">
         <p class="toc-caption">Table of Contents</p>
       </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════════
-       WHO IS THIS FOR
-       ═══════════════════════════════════════════ -->
-  <section class="section">
-    <div class="container">
-      <span class="section-label">Who this is for</span>
-      <h2 class="section-heading">You've heard something<br>the lesson books don't explain.</h2>
-
-      <ul class="for-list">
-        <li>You practice seriously and want to understand <em>why</em> the techniques work, not just how</li>
-        <li>You are drawn to world music traditions and want more than surface-level exposure</li>
-        <li>You have listened to Pharoah Sanders, John Coltrane, Yusef Lateef, or Jan Garbarek and wondered what they knew</li>
-        <li>You suspect that music and spirituality are the same thing, viewed from different angles</li>
-        <li>You want to go deeper</li>
-      </ul>
     </div>
   </section>
 
