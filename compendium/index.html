@@ -58,18 +58,12 @@
       --bg:          #06070f;
       --surface:     #0b0e1c;
       --surface-2:   #111829;
-      --blue:        #1e3a8a;
-      --blue-glow:   rgba(59, 130, 246, 0.12);
-      --purple:      #4c1d95;
-      --purple-glow: rgba(139, 92, 246, 0.14);
-      --emerald:     #064e3b;
-      --emerald-glow:rgba(16, 185, 129, 0.1);
       --gold:        #c9963a;
       --gold-bright: #e8b94f;
-      --gold-glow:   rgba(201, 150, 58, 0.25);
-      --text:        #dde4f2;
-      --text-muted:  #8898b8;
-      --divider:     rgba(139, 92, 246, 0.22);
+      --gold-glow:   rgba(201, 150, 58, 0.22);
+      --text:        #c8d2e6;
+      --text-muted:  #7a8bb0;
+      --divider:     rgba(139, 92, 246, 0.12);
       --ff-head:     'Cormorant Garamond', Georgia, 'Times New Roman', serif;
       --ff-body:     'Inter', system-ui, -apple-system, sans-serif;
     }
@@ -78,96 +72,131 @@
 
     body {
       background-color: var(--bg);
-      background-image:
-        radial-gradient(ellipse 90% 55% at 50% 0%,   rgba(30, 58, 138, 0.22) 0%, transparent 65%),
-        radial-gradient(ellipse 70% 50% at 10% 60%,  rgba(76, 29, 149, 0.14) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 90% 80%,  rgba(6, 78, 59, 0.12)   0%, transparent 60%);
       color: var(--text);
       font-family: var(--ff-body);
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.85;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      opacity: 0;
+      animation: pageEnter 1.2s ease-out 0.3s forwards;
     }
 
-    /* ── LAYOUT ── */
+    /* Breathing aurora background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(76, 29, 149, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(201, 150, 58, 0.07) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 50% at 50% 0%, rgba(30, 58, 138, 0.10) 0%, transparent 50%);
+      animation: aurora 20s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes aurora {
+      0%   { transform: translate(0, 0) scale(1); opacity: 0.8; }
+      33%  { transform: translate(2%, -1%) scale(1.05); opacity: 1; }
+      66%  { transform: translate(-1%, 2%) scale(0.97); opacity: 0.9; }
+      100% { transform: translate(-2%, -2%) scale(1.03); opacity: 0.85; }
+    }
+
+    @keyframes pageEnter {
+      to { opacity: 1; }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-d1 { transition-delay: 0.12s; }
+    .reveal-d2 { transition-delay: 0.24s; }
+    .reveal-d3 { transition-delay: 0.36s; }
+    .reveal-d4 { transition-delay: 0.48s; }
+    .reveal-d5 { transition-delay: 0.60s; }
+
+    /* LAYOUT */
     .container {
       width: 100%;
-      max-width: 720px;
+      max-width: 660px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 28px;
     }
 
-    /* ── DIVIDER ── */
+    /* Whitespace separator */
     .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--divider), transparent);
-      margin: 60px 0;
+      height: 0;
+      margin: 100px 0;
     }
 
     /* ── HERO ── */
     .hero {
       text-align: center;
-      padding: 64px 0 40px;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--ff-body);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 32px;
+      padding: 100px 0 48px;
     }
 
     .cover-wrap {
       display: inline-block;
       position: relative;
-      margin-bottom: 44px;
+      margin-bottom: 52px;
     }
 
     .cover-wrap::before {
       content: '';
       position: absolute;
-      inset: -18px;
-      border-radius: 4px;
-      background: radial-gradient(ellipse at center, var(--purple-glow) 0%, transparent 70%);
-      filter: blur(20px);
+      inset: -24px;
+      border-radius: 6px;
+      background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.16) 0%, transparent 70%);
+      filter: blur(24px);
       pointer-events: none;
+      animation: glowPulse 8s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50%      { opacity: 1;   transform: scale(1.1); }
     }
 
     .cover-img {
       display: block;
       width: 100%;
-      max-width: 320px;
+      max-width: 300px;
       height: auto;
-      border-radius: 3px;
+      border-radius: 4px;
       box-shadow:
-        0 0 0 1px rgba(139, 92, 246, 0.18),
-        0 8px 32px rgba(0,0,0,0.6),
-        0 32px 80px rgba(0,0,0,0.4);
+        0 0 0 1px rgba(139, 92, 246, 0.10),
+        0 12px 40px rgba(0,0,0,0.5),
+        0 40px 100px rgba(0,0,0,0.25);
       position: relative;
     }
 
     .hero-headline {
       font-family: var(--ff-head);
-      font-size: clamp(2.1rem, 6vw, 3.2rem);
-      font-weight: 600;
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-      color: #eef1fb;
-      margin-bottom: 20px;
+      font-size: clamp(2.2rem, 6.5vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      color: #f0f2f8;
+      margin-bottom: 24px;
     }
 
     .hero-sub {
       font-family: var(--ff-head);
-      font-size: clamp(1.05rem, 3vw, 1.3rem);
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
       font-style: italic;
       font-weight: 300;
-      color: #b8c8e8;
-      max-width: 540px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
+      color: #a8b8d8;
+      max-width: 520px;
+      margin: 0 auto 44px;
+      line-height: 1.55;
     }
 
     /* ── CTA BUTTON ── */
@@ -212,123 +241,138 @@
       letter-spacing: 0.02em;
     }
 
-    /* ── WHO I AM ── */
-    .section { padding: 8px 0; }
+    /* ── SECTIONS ── */
+    .section { padding: 12px 0; }
 
     .section-label {
       font-family: var(--ff-body);
       font-size: 10px;
       font-weight: 500;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       display: block;
+      opacity: 0.85;
     }
 
     .section-heading {
       font-family: var(--ff-head);
-      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
-      font-weight: 600;
-      line-height: 1.2;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.25;
       color: #eef1fb;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
+      letter-spacing: 0.01em;
     }
 
     .section-body {
       color: var(--text);
       font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
-    .section-body p + p { margin-top: 18px; }
+    .section-body p + p { margin-top: 22px; }
 
     .section-body em {
       font-style: italic;
-      color: #b8c8e8;
+      color: #b0c0e0;
     }
 
     /* ── WHAT'S INSIDE ── */
     .inside-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2px;
+      gap: 0;
     }
 
     .inside-item {
-      padding: 28px 0;
-      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.06);
       display: grid;
-      grid-template-columns: 40px 1fr;
-      gap: 20px;
+      grid-template-columns: 44px 1fr;
+      gap: 24px;
       align-items: start;
+      transition: background 0.5s ease;
+      border-radius: 6px;
+      margin: 0 -12px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .inside-item:hover {
+      background: rgba(139, 92, 246, 0.035);
     }
 
     .inside-item:last-child { border-bottom: none; }
 
     .inside-numeral {
       font-family: var(--ff-head);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 300;
       font-style: italic;
-      color: var(--purple-glow);
-      color: rgba(139, 92, 246, 0.5);
+      color: rgba(139, 92, 246, 0.35);
       line-height: 1.3;
       padding-top: 2px;
+      transition: color 0.5s ease;
+    }
+
+    .inside-item:hover .inside-numeral {
+      color: rgba(201, 150, 58, 0.65);
     }
 
     .inside-title {
       font-family: var(--ff-head);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: #dde4f2;
       margin-bottom: 8px;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     .inside-desc {
       font-size: 0.92rem;
       color: var(--text-muted);
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
-    /* ── TABLE OF CONTENTS IMAGE ── */
-    .toc-wrap {
-      text-align: center;
-    }
+    /* ── TABLE OF CONTENTS ── */
+    .toc-wrap { text-align: center; }
 
     .toc-img {
       display: inline-block;
       width: 100%;
-      max-width: 560px;
+      max-width: 520px;
       height: auto;
       border-radius: 4px;
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(139, 92, 246, 0.08);
+      border: 1px solid rgba(139, 92, 246, 0.10);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35), 0 0 0 1px rgba(139, 92, 246, 0.04);
     }
 
     .toc-caption {
-      margin-top: 14px;
-      font-size: 0.78rem;
+      margin-top: 16px;
+      font-size: 0.75rem;
       color: var(--text-muted);
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+      opacity: 0.6;
     }
 
     /* ── WHO IS THIS FOR ── */
     .for-list {
       list-style: none;
       padding: 0;
-      margin: 20px 0 0;
+      margin: 24px 0 0;
     }
 
     .for-list li {
       position: relative;
-      padding-left: 22px;
-      margin-bottom: 12px;
-      font-size: 0.98rem;
+      padding-left: 24px;
+      margin-bottom: 14px;
+      font-size: 0.97rem;
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.75;
     }
 
     .for-list li::before {
@@ -337,14 +381,15 @@
       left: 0;
       color: var(--gold);
       font-weight: 300;
+      opacity: 0.5;
     }
 
     /* ── PRICE BLOCK ── */
     .price-block {
-      background: linear-gradient(135deg, var(--surface) 0%, #0f1428 100%);
-      border: 1px solid rgba(139, 92, 246, 0.2);
-      border-radius: 6px;
-      padding: 44px 32px;
+      background: linear-gradient(135deg, rgba(11,14,28,0.7) 0%, rgba(15,20,40,0.5) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.10);
+      border-radius: 8px;
+      padding: 52px 36px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -353,18 +398,18 @@
     .price-block::before {
       content: '';
       position: absolute;
-      top: -40px;
+      top: -60px;
       left: 50%;
       transform: translateX(-50%);
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(76, 29, 149, 0.2) 0%, transparent 70%);
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(76, 29, 149, 0.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
     .price-product-name {
       font-family: var(--ff-head);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: #eef1fb;
       margin-bottom: 4px;
@@ -372,120 +417,58 @@
 
     .price-amount {
       font-family: var(--ff-head);
-      font-size: clamp(3rem, 10vw, 4.5rem);
+      font-size: clamp(2.8rem, 9vw, 4rem);
       font-weight: 600;
       line-height: 1;
       color: var(--gold-bright);
-      margin: 16px 0 6px;
+      margin: 20px 0 8px;
     }
 
     .price-details {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      margin-bottom: 32px;
-      line-height: 1.6;
+      margin-bottom: 36px;
+      line-height: 1.7;
     }
 
     /* ── FOOTER ── */
     .footer {
-      padding: 40px 0 60px;
+      padding: 48px 0 80px;
       text-align: center;
     }
 
     .footer-text {
-      font-size: 0.8rem;
-      color: rgba(136, 152, 184, 0.6);
-      line-height: 1.7;
+      font-size: 0.78rem;
+      color: rgba(136, 152, 184, 0.45);
+      line-height: 1.8;
     }
 
     .footer-text a {
       color: var(--text-muted);
       text-decoration: none;
-      border-bottom: 1px solid rgba(136, 152, 184, 0.3);
+      border-bottom: 1px solid rgba(136, 152, 184, 0.25);
       transition: color 0.2s, border-color 0.2s;
     }
 
     .footer-text a:hover {
       color: var(--text);
-      border-color: var(--text-muted);
-    }
-
-    /* ── AUDIO PLACEHOLDER ── */
-    .audio-section {
-      text-align: center;
-    }
-
-    .audio-label {
-      display: block;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-
-    .audio-embed {
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      background: linear-gradient(135deg, var(--surface) 0%, #0f1428 100%);
-      border: 1px solid rgba(139, 92, 246, 0.18);
-      border-radius: 4px;
-      padding: 20px 28px;
-      width: 100%;
-      max-width: 480px;
-    }
-
-    .audio-icon {
-      flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(139, 92, 246, 0.15);
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .audio-icon svg {
-      width: 14px;
-      height: 14px;
-      fill: rgba(196, 167, 255, 0.8);
-      margin-left: 2px;
-    }
-
-    .audio-text {
-      text-align: left;
-    }
-
-    .audio-title {
-      font-family: var(--ff-head);
-      font-size: 1rem;
-      font-style: italic;
-      color: #dde4f2;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .audio-sub {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.03em;
+      border-color: rgba(136, 152, 184, 0.5);
     }
 
     /* ── RESPONSIVE ── */
     @media (min-width: 600px) {
-      .hero { padding: 80px 0 52px; }
-      .cover-img { max-width: 380px; }
-      .inside-grid { gap: 0; }
+      .hero { padding: 120px 0 64px; }
+      .cover-img { max-width: 340px; }
+      .container { padding: 0 32px; }
+      .divider { margin: 120px 0; }
+      .inside-item { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
     }
 
     @media (min-width: 768px) {
-      .hero { padding: 96px 0 64px; }
-      .cover-img { max-width: 400px; }
-      .price-block { padding: 56px 48px; }
+      .hero { padding: 140px 0 80px; }
+      .cover-img { max-width: 360px; }
+      .price-block { padding: 64px 56px; }
+      .divider { margin: 140px 0; }
     }
   </style>
 </head>
@@ -533,7 +516,7 @@
   <!-- ═══════════════════════════════════════════
        INTRO
        ═══════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
       <div class="section-body">
         <p>I'm Tito Silversax, saxophonist based in Cleveland, Ohio.</p>
@@ -547,7 +530,7 @@
   <!-- ═══════════════════════════════════════════
        WHO IS THIS FOR
        ═══════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
       <span class="section-label">Who this is for</span>
       <h2 class="section-heading">You, if any of this sounds familiar.</h2>
@@ -565,14 +548,14 @@
   <!-- ═══════════════════════════════════════════
        WHAT'S INSIDE
        ═══════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
       <span class="section-label">What's inside</span>
       <h2 class="section-heading">Six territories.<br>One integrated map.</h2>
 
       <div class="inside-grid">
 
-        <div class="inside-item">
+        <div class="inside-item reveal reveal-d1">
           <span class="inside-numeral">I</span>
           <div>
             <h3 class="inside-title">The Harmonic Series</h3>
@@ -580,7 +563,7 @@
           </div>
         </div>
 
-        <div class="inside-item">
+        <div class="inside-item reveal reveal-d2">
           <span class="inside-numeral">II</span>
           <div>
             <h3 class="inside-title">Microtonality &amp; Alternate Fingerings</h3>
@@ -588,7 +571,7 @@
           </div>
         </div>
 
-        <div class="inside-item">
+        <div class="inside-item reveal reveal-d3">
           <span class="inside-numeral">III</span>
           <div>
             <h3 class="inside-title">World Tuning Systems</h3>
@@ -596,7 +579,7 @@
           </div>
         </div>
 
-        <div class="inside-item">
+        <div class="inside-item reveal reveal-d4">
           <span class="inside-numeral">IV</span>
           <div>
             <h3 class="inside-title">Sacred Geometry</h3>
@@ -604,7 +587,7 @@
           </div>
         </div>
 
-        <div class="inside-item">
+        <div class="inside-item reveal reveal-d5">
           <span class="inside-numeral">V</span>
           <div>
             <h3 class="inside-title">Kabbalah &amp; Sufism</h3>
@@ -612,7 +595,7 @@
           </div>
         </div>
 
-        <div class="inside-item">
+        <div class="inside-item reveal reveal-d1">
           <span class="inside-numeral">VI</span>
           <div>
             <h3 class="inside-title">An Integrated Practice</h3>
@@ -629,11 +612,11 @@
   <!-- ═══════════════════════════════════════════
        TABLE OF CONTENTS
        ═══════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
       <span class="section-label">A look inside</span>
       <div class="toc-wrap">
-        <img class="toc-img" src="/images/TOC.jpg" alt="Table of Contents — The Saxophonist's Compendium" width="560">
+        <img class="toc-img" src="/images/TOC.jpg" alt="Table of Contents — The Saxophonist's Compendium" width="560" loading="lazy">
         <p class="toc-caption">Table of Contents</p>
       </div>
     </div>
@@ -644,7 +627,7 @@
   <!-- ═══════════════════════════════════════════
        COMMUNITY
        ═══════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container" style="text-align:center;">
       <span class="section-label">Community</span>
       <h2 class="section-heading" style="margin-bottom: 14px;">Explore this together.</h2>
@@ -663,7 +646,7 @@
   <!-- ═══════════════════════════════════════════
        PRICE + CTA
        ═══════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
       <div class="price-block">
         <p class="price-product-name">The Saxophonist's Compendium</p>
@@ -685,7 +668,7 @@
   <!-- ═══════════════════════════════════════════
        FOOTER
        ═══════════════════════════════════════════ -->
-  <footer class="footer">
+  <footer class="footer reveal">
     <div class="container">
       <p class="footer-text">
         Secure checkout via Kit &nbsp;·&nbsp;
@@ -696,6 +679,23 @@
       </p>
     </div>
   </footer>
+
+  <!-- Scroll reveal -->
+  <script>
+    (function() {
+      var reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
 
 </body>
 </html>
