@@ -70,28 +70,6 @@
 
     html {
       scroll-behavior: smooth;
-      cursor: none;
-    }
-
-    /* Custom cursor */
-    .cursor {
-      position: fixed;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--gold);
-      pointer-events: none;
-      z-index: 10000;
-      mix-blend-mode: difference;
-      transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
-      transform: translate(-50%, -50%);
-    }
-    .cursor.hover {
-      width: 32px;
-      height: 32px;
-      background: rgba(201, 150, 58, 0.15);
-      border: 1px solid var(--gold);
-      mix-blend-mode: normal;
     }
 
     /* Vignette overlay */
@@ -257,7 +235,7 @@
       padding: 16px 36px !important;
       border-radius: 3px !important;
       border: none !important;
-      cursor: none !important;
+      cursor: pointer !important;
       transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.15s ease !important;
       box-shadow: 0 0 28px var(--gold-glow), 0 4px 16px rgba(0,0,0,0.4) !important;
       width: 100% !important;
@@ -517,11 +495,6 @@
       will-change: transform;
     }
 
-    /* Price count-up */
-    .price-amount {
-      font-variant-numeric: tabular-nums;
-    }
-
     /* ── RESPONSIVE ── */
     @media (min-width: 600px) {
       .hero { padding: 120px 0 64px; }
@@ -616,9 +589,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Custom cursor -->
-  <div class="cursor"></div>
 
   <!-- Vignette -->
   <div class="vignette"></div>
@@ -802,7 +772,7 @@
     <div class="container">
       <div class="price-block">
         <p class="price-product-name">The Saxophonist's Compendium</p>
-        <div class="price-amount" data-count="27">$0</div>
+        <div class="price-amount">$27</div>
         <p class="price-details">
           PDF &amp; EPUB &nbsp;·&nbsp; Instant digital download<br>
           No subscription &nbsp;·&nbsp; No DRM &nbsp;·&nbsp; Yours to keep
@@ -907,35 +877,6 @@
     })();
   </script>
 
-  <!-- Custom cursor -->
-  <script>
-    (function() {
-      var cursor = document.querySelector('.cursor');
-      if (!cursor) return;
-      var mouseX = 0, mouseY = 0, curX = 0, curY = 0;
-
-      document.addEventListener('mousemove', function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-      function update() {
-        curX += (mouseX - curX) * 0.15;
-        curY += (mouseY - curY) * 0.15;
-        cursor.style.left = curX + 'px';
-        cursor.style.top = curY + 'px';
-        requestAnimationFrame(update);
-      }
-      update();
-
-      var interactives = document.querySelectorAll('a, button, .inside-item');
-      interactives.forEach(function(el) {
-        el.addEventListener('mouseenter', function() { cursor.classList.add('hover'); });
-        el.addEventListener('mouseleave', function() { cursor.classList.remove('hover'); });
-      });
-    })();
-  </script>
-
   <!-- Mouse parallax -->
   <script>
     (function() {
@@ -952,41 +893,6 @@
           el.style.transform = 'translate(' + (dx * speed * 30) + 'px, ' + (dy * speed * 30) + 'px)';
         });
       });
-    })();
-  </script>
-
-  <!-- Price count-up -->
-  <script>
-    (function() {
-      var priceEl = document.querySelector('.price-amount[data-count]');
-      if (!priceEl) return;
-      var target = parseInt(priceEl.getAttribute('data-count'), 10);
-      var duration = 1200;
-      var startTime = null;
-
-      function count(timestamp) {
-        if (!startTime) startTime = timestamp;
-        var progress = Math.min((timestamp - startTime) / duration, 1);
-        var ease = 1 - Math.pow(1 - progress, 3);
-        var current = Math.floor(ease * target);
-        priceEl.textContent = '$' + current;
-        if (progress < 1) {
-          requestAnimationFrame(count);
-        } else {
-          priceEl.textContent = '$' + target;
-        }
-      }
-
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            requestAnimationFrame(count);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.5 });
-
-      observer.observe(priceEl);
     })();
   </script>
 
