@@ -68,7 +68,40 @@
       --ff-body:     'Inter', system-ui, -apple-system, sans-serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      cursor: none;
+    }
+
+    /* Custom cursor */
+    .cursor {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      pointer-events: none;
+      z-index: 10000;
+      mix-blend-mode: difference;
+      transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+      transform: translate(-50%, -50%);
+    }
+    .cursor.hover {
+      width: 32px;
+      height: 32px;
+      background: rgba(201, 150, 58, 0.15);
+      border: 1px solid var(--gold);
+      mix-blend-mode: normal;
+    }
+
+    /* Vignette overlay */
+    .vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      pointer-events: none;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, transparent 40%, rgba(6,7,15,0.55) 100%);
+    }
 
     body {
       background-color: var(--bg);
@@ -147,6 +180,12 @@
       display: inline-block;
       position: relative;
       margin-bottom: 52px;
+      animation: levitate 6s ease-in-out infinite;
+    }
+
+    @keyframes levitate {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
     }
 
     .cover-wrap::before {
@@ -218,12 +257,18 @@
       padding: 16px 36px !important;
       border-radius: 3px !important;
       border: none !important;
-      cursor: pointer !important;
+      cursor: none !important;
       transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.15s ease !important;
       box-shadow: 0 0 28px var(--gold-glow), 0 4px 16px rgba(0,0,0,0.4) !important;
       width: 100% !important;
       max-width: 360px !important;
       text-align: center !important;
+      animation: btnBreathe 4s ease-in-out infinite;
+    }
+
+    @keyframes btnBreathe {
+      0%, 100% { box-shadow: 0 0 24px var(--gold-glow), 0 4px 16px rgba(0,0,0,0.4); }
+      50%      { box-shadow: 0 0 40px rgba(201,150,58,0.35), 0 4px 16px rgba(0,0,0,0.4); }
     }
 
     .convertkit-button:hover,
@@ -264,6 +309,18 @@
       color: #eef1fb;
       margin-bottom: 28px;
       letter-spacing: 0.01em;
+      position: relative;
+      padding-left: 20px;
+    }
+    .section-heading::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
     }
 
     .section-body {
@@ -454,6 +511,17 @@
       border-color: rgba(136, 152, 184, 0.5);
     }
 
+    /* Mouse parallax */
+    .parallax {
+      transition: transform 0.3s ease-out;
+      will-change: transform;
+    }
+
+    /* Price count-up */
+    .price-amount {
+      font-variant-numeric: tabular-nums;
+    }
+
     /* ── RESPONSIVE ── */
     @media (min-width: 600px) {
       .hero { padding: 120px 0 64px; }
@@ -549,6 +617,12 @@
 </head>
 <body>
 
+  <!-- Custom cursor -->
+  <div class="cursor"></div>
+
+  <!-- Vignette -->
+  <div class="vignette"></div>
+
   <!-- Particle canvas -->
   <canvas id="particles"></canvas>
 
@@ -563,7 +637,7 @@
        ═══════════════════════════════════════════ -->
   <section class="hero">
     <div class="container">
-      <div class="cover-wrap">
+      <div class="cover-wrap parallax" data-speed="0.04">
         <img
           class="cover-img"
           src="/images/compendium-cover.jpg"
@@ -573,9 +647,9 @@
         >
       </div>
 
-      <h1 class="hero-headline">The Saxophone is Not&nbsp;a&nbsp;Machine.<br>It's a Portal.</h1>
+      <h1 class="hero-headline parallax" data-speed="0.02">The Saxophone is Not&nbsp;a&nbsp;Machine.<br>It's a Portal.</h1>
 
-      <p class="hero-sub">
+      <p class="hero-sub parallax" data-speed="0.01">
         You'll hear differently after this.<br>That's not a metaphor.
       </p>
 
@@ -728,7 +802,7 @@
     <div class="container">
       <div class="price-block">
         <p class="price-product-name">The Saxophonist's Compendium</p>
-        <div class="price-amount">$27</div>
+        <div class="price-amount" data-count="27">$0</div>
         <p class="price-details">
           PDF &amp; EPUB &nbsp;·&nbsp; Instant digital download<br>
           No subscription &nbsp;·&nbsp; No DRM &nbsp;·&nbsp; Yours to keep
@@ -830,6 +904,89 @@
         requestAnimationFrame(animate);
       }
       animate();
+    })();
+  </script>
+
+  <!-- Custom cursor -->
+  <script>
+    (function() {
+      var cursor = document.querySelector('.cursor');
+      if (!cursor) return;
+      var mouseX = 0, mouseY = 0, curX = 0, curY = 0;
+
+      document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function update() {
+        curX += (mouseX - curX) * 0.15;
+        curY += (mouseY - curY) * 0.15;
+        cursor.style.left = curX + 'px';
+        cursor.style.top = curY + 'px';
+        requestAnimationFrame(update);
+      }
+      update();
+
+      var interactives = document.querySelectorAll('a, button, .inside-item');
+      interactives.forEach(function(el) {
+        el.addEventListener('mouseenter', function() { cursor.classList.add('hover'); });
+        el.addEventListener('mouseleave', function() { cursor.classList.remove('hover'); });
+      });
+    })();
+  </script>
+
+  <!-- Mouse parallax -->
+  <script>
+    (function() {
+      var parallaxEls = document.querySelectorAll('.parallax');
+      if (!parallaxEls.length) return;
+      var centerX = window.innerWidth / 2;
+      var centerY = window.innerHeight / 2;
+
+      document.addEventListener('mousemove', function(e) {
+        var dx = (e.clientX - centerX) / centerX;
+        var dy = (e.clientY - centerY) / centerY;
+        parallaxEls.forEach(function(el) {
+          var speed = parseFloat(el.getAttribute('data-speed')) || 0.02;
+          el.style.transform = 'translate(' + (dx * speed * 30) + 'px, ' + (dy * speed * 30) + 'px)';
+        });
+      });
+    })();
+  </script>
+
+  <!-- Price count-up -->
+  <script>
+    (function() {
+      var priceEl = document.querySelector('.price-amount[data-count]');
+      if (!priceEl) return;
+      var target = parseInt(priceEl.getAttribute('data-count'), 10);
+      var duration = 1200;
+      var startTime = null;
+
+      function count(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        var current = Math.floor(ease * target);
+        priceEl.textContent = '$' + current;
+        if (progress < 1) {
+          requestAnimationFrame(count);
+        } else {
+          priceEl.textContent = '$' + target;
+        }
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            requestAnimationFrame(count);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(priceEl);
     })();
   </script>
 
