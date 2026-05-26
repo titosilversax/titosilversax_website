@@ -184,7 +184,6 @@
       font-weight: 300;
       line-height: 1.1;
       letter-spacing: 0.02em;
-      color: #f0f2f8;
       margin-bottom: 24px;
     }
 
@@ -470,9 +469,88 @@
       .price-block { padding: 64px 56px; }
       .divider { margin: 140px 0; }
     }
+    /* ── FILM GRAIN OVERLAY ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 180px 180px;
+    }
+
+    /* ── TEXT SELECTION ── */
+    ::selection {
+      background: rgba(201, 150, 58, 0.25);
+      color: #f0f2f8;
+    }
+    ::-moz-selection {
+      background: rgba(201, 150, 58, 0.25);
+      color: #f0f2f8;
+    }
+
+    /* ── GOLD LINE DRAW SEPARATOR ── */
+    .gold-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 80px 0;
+      height: 1px;
+      position: relative;
+    }
+    .gold-line::before {
+      content: '';
+      width: 0%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,150,58,0.3), transparent);
+      transition: width 1.2s ease-out;
+    }
+    .gold-line.visible::before {
+      width: 100%;
+    }
+    .gold-line::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(201,150,58,0.5);
+      opacity: 0;
+      transition: opacity 0.6s ease 0.8s;
+    }
+    .gold-line.visible::after {
+      opacity: 1;
+    }
+
+    /* ── PARTICLE CANVAS ── */
+    #particles {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    /* ── HERO HEADLINE SHIMMER ── */
+    .hero-headline {
+      background: linear-gradient(90deg, #f0f2f8 0%, #e8d5a8 25%, #f0f2f8 50%, #c8b8e8 75%, #f0f2f8 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 8s linear infinite;
+    }
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Particle canvas -->
+  <canvas id="particles"></canvas>
 
   <!-- GTM noscript — replace GTM-XXXXXXX -->
   <noscript>
@@ -511,7 +589,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="gold-line"></div>
 
   <!-- ═══════════════════════════════════════════
        INTRO
@@ -525,7 +603,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="gold-line"></div>
 
   <!-- ═══════════════════════════════════════════
        WHO IS THIS FOR
@@ -543,7 +621,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="gold-line"></div>
 
   <!-- ═══════════════════════════════════════════
        WHAT'S INSIDE
@@ -607,7 +685,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="gold-line"></div>
 
   <!-- ═══════════════════════════════════════════
        TABLE OF CONTENTS
@@ -622,7 +700,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="gold-line"></div>
 
   <!-- ═══════════════════════════════════════════
        COMMUNITY
@@ -641,7 +719,7 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="gold-line"></div>
 
   <!-- ═══════════════════════════════════════════
        PRICE + CTA
@@ -680,11 +758,9 @@
     </div>
   </footer>
 
-  <!-- Scroll reveal -->
+  <!-- Scroll reveal + gold line observer -->
   <script>
     (function() {
-      var reveals = document.querySelectorAll('.reveal');
-      if (!reveals.length) return;
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
@@ -693,7 +769,67 @@
           }
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      reveals.forEach(function(el) { observer.observe(el); });
+
+      document.querySelectorAll('.reveal, .gold-line').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+  <!-- Stardust particles -->
+  <script>
+    (function() {
+      var canvas = document.getElementById('particles');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      var particles = [];
+      var maxParticles = 60;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function createParticle() {
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 1.5 + 0.5,
+          speedX: (Math.random() - 0.5) * 0.15,
+          speedY: -Math.random() * 0.2 - 0.05,
+          opacity: Math.random() * 0.4 + 0.1,
+          color: Math.random() > 0.6 ? '201, 150, 58' : '139, 92, 246'
+        };
+      }
+
+      for (var i = 0; i < maxParticles; i++) {
+        particles.push(createParticle());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          p.x += p.speedX;
+          p.y += p.speedY;
+
+          if (p.y < -10) {
+            p.y = canvas.height + 10;
+            p.x = Math.random() * canvas.width;
+          }
+          if (p.x < -10) p.x = canvas.width + 10;
+          if (p.x > canvas.width + 10) p.x = -10;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(' + p.color + ',' + p.opacity + ')';
+          ctx.fill();
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
     })();
   </script>
 
