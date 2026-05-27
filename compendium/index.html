@@ -93,25 +93,23 @@
       animation: pageEnter 1.2s ease-out 0.3s forwards;
     }
 
-    /* Breathing aurora background */
+    /* Atmospheric background image */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      z-index: -1;
-      background:
-        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(76, 29, 149, 0.10) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(201, 150, 58, 0.07) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 50% at 50% 0%, rgba(30, 58, 138, 0.10) 0%, transparent 50%);
-      animation: aurora 20s ease-in-out infinite alternate;
-      pointer-events: none;
+      z-index: -2;
+      background: url('/images/background.webp') center bottom / cover no-repeat;
     }
 
-    @keyframes aurora {
-      0%   { transform: translate(0, 0) scale(1); opacity: 0.8; }
-      33%  { transform: translate(2%, -1%) scale(1.05); opacity: 1; }
-      66%  { transform: translate(-1%, 2%) scale(0.97); opacity: 0.9; }
-      100% { transform: translate(-2%, -2%) scale(1.03); opacity: 0.85; }
+    /* Dark readability overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(6,7,15,0.3) 0%, rgba(6,7,15,0.75) 100%);
+      pointer-events: none;
     }
 
     @keyframes pageEnter {
@@ -510,19 +508,6 @@
       .price-block { padding: 64px 56px; }
       .divider { margin: 140px 0; }
     }
-    /* ── FILM GRAIN OVERLAY ── */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0.035;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 180px 180px;
-    }
-
     /* ── TEXT SELECTION ── */
     ::selection {
       background: rgba(201, 150, 58, 0.25);
@@ -566,14 +551,6 @@
       opacity: 1;
     }
 
-    /* ── PARTICLE CANVAS ── */
-    #particles {
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      pointer-events: none;
-    }
-
     /* ── HERO HEADLINE SHIMMER ── */
     .hero-headline {
       background: linear-gradient(90deg, #f0f2f8 0%, #e8d5a8 25%, #f0f2f8 50%, #c8b8e8 75%, #f0f2f8 100%);
@@ -592,9 +569,6 @@
 
   <!-- Vignette -->
   <div class="vignette"></div>
-
-  <!-- Particle canvas -->
-  <canvas id="particles"></canvas>
 
   <!-- GTM noscript — replace GTM-XXXXXXX -->
   <noscript>
@@ -817,63 +791,6 @@
       document.querySelectorAll('.reveal, .gold-line').forEach(function(el) {
         observer.observe(el);
       });
-    })();
-  </script>
-
-  <!-- Stardust particles -->
-  <script>
-    (function() {
-      var canvas = document.getElementById('particles');
-      if (!canvas) return;
-      var ctx = canvas.getContext('2d');
-      var particles = [];
-      var maxParticles = 60;
-
-      function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resize();
-      window.addEventListener('resize', resize);
-
-      function createParticle() {
-        return {
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          size: Math.random() * 1.5 + 0.5,
-          speedX: (Math.random() - 0.5) * 0.15,
-          speedY: -Math.random() * 0.2 - 0.05,
-          opacity: Math.random() * 0.4 + 0.1,
-          color: Math.random() > 0.6 ? '201, 150, 58' : '139, 92, 246'
-        };
-      }
-
-      for (var i = 0; i < maxParticles; i++) {
-        particles.push(createParticle());
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (var i = 0; i < particles.length; i++) {
-          var p = particles[i];
-          p.x += p.speedX;
-          p.y += p.speedY;
-
-          if (p.y < -10) {
-            p.y = canvas.height + 10;
-            p.x = Math.random() * canvas.width;
-          }
-          if (p.x < -10) p.x = canvas.width + 10;
-          if (p.x > canvas.width + 10) p.x = -10;
-
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(' + p.color + ',' + p.opacity + ')';
-          ctx.fill();
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
     })();
   </script>
 
