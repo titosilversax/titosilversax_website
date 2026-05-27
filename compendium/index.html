@@ -93,18 +93,14 @@
       animation: pageEnter 1.2s ease-out 0.3s forwards;
     }
 
-    /* Atmospheric background image */
-    body::before {
-      content: '';
+    .bg-image {
       position: fixed;
       inset: 0;
       z-index: -2;
       background: url('/images/background.webp') center bottom / cover no-repeat;
     }
 
-    /* Dark readability overlay */
-    body::after {
-      content: '';
+    .bg-overlay {
       position: fixed;
       inset: 0;
       z-index: -1;
@@ -566,6 +562,12 @@
   </style>
 </head>
 <body>
+
+  <!-- Background image -->
+  <div class="bg-image"></div>
+
+  <!-- Dark overlay -->
+  <div class="bg-overlay"></div>
 
   <!-- Vignette -->
   <div class="vignette"></div>
