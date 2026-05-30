@@ -4,6 +4,9 @@
   "redirects": [
     { "source": "/", "destination": "/titodreamingwithme", "permanent": false }
   ],
+  "rewrites": [
+    { "source": "/titodreamingwithme/:path*", "destination": "/titodreamingwithme/index.html" }
+  ],
   "headers": [
     {
       "source": "/images/(.*)",
