@@ -67,9 +67,6 @@
     body {
       min-height: 100dvh;
       background-color: var(--bg);
-      background-image:
-        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(6, 78, 59, 0.18) 0%, transparent 65%),
-        radial-gradient(ellipse 70% 50% at 50% 100%, rgba(76, 29, 149, 0.12) 0%, transparent 60%);
       color: var(--text);
       font-family: var(--ff-body);
       font-size: 16px;
@@ -232,6 +229,19 @@
 
     .footer-note a:hover { color: var(--text); }
 
+    .bg-image {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: url('/images/background.webp') center bottom / cover no-repeat;
+    }
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(6,7,15,0.3) 0%, rgba(6,7,15,0.75) 100%);
+      pointer-events: none;
+    }
     @media (max-width: 480px) {
       .card { padding: 40px 24px; }
     }
@@ -240,6 +250,10 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+
+  <!-- Background image -->
+  <div class="bg-image"></div>
+  <div class="bg-overlay"></div>
 
   <!-- GTM noscript — replace GTM-XXXXXXX -->
   <noscript>

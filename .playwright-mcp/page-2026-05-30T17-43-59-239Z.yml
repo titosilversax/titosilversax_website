@@ -1,0 +1,320 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - button "Tito Dreaming With Me" [ref=e6] [cursor=pointer]:
+        - img "Tito Dreaming With Me" [ref=e7]
+      - generic [ref=e8]:
+        - button "About" [ref=e9] [cursor=pointer]: About
+        - button "Listen" [ref=e10] [cursor=pointer]: Listen
+        - button "Offerings" [ref=e11] [cursor=pointer]: Offerings
+        - button "Contact" [ref=e12] [cursor=pointer]: Contact
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e18]:
+        - heading "Write songs that sound exactly how you feel." [level=1] [ref=e19]:
+          - generic [ref=e20]: Write
+          - generic [ref=e21]: songs
+          - generic [ref=e22]: that
+          - generic [ref=e23]: sound
+          - generic [ref=e24]: exactly
+          - generic [ref=e25]: how
+          - generic [ref=e26]: you
+          - generic [ref=e27]: feel.
+        - paragraph [ref=e28]: Stop losing the feeling that sparked your song to safe chord patterns. Map your emotion directly to the music — no theory required.
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - button "Get the Songwriter's Edition" [ref=e31] [cursor=pointer]
+            - button "Get the Free Guide" [ref=e32] [cursor=pointer]
+          - paragraph [ref=e33]: "\"Damn the rules — it's the feeling that counts.\""
+      - generic [ref=e34]:
+        - generic [ref=e35]: Scroll
+        - img [ref=e36]
+    - generic [ref=e38]:
+      - img "Tito with saxophone" [ref=e40]
+      - generic [ref=e45]: Peer Support • Modal Music
+      - generic [ref=e46]:
+        - heading "If music has ever felt like the only thing that understood you" [level=2] [ref=e47]
+        - paragraph [ref=e48]: You're in the right place.
+      - paragraph [ref=e49]: I'm Tito — a state-certified peer support specialist and saxophonist. I build quiet, modal soundscapes and honest conversations for people navigating heavy seasons.
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]: The Path
+        - heading "Choose Your Starting Point" [level=2] [ref=e57]
+        - paragraph [ref=e58]: Every tool here was built feeling-first — to help you write music that actually sounds like you.
+        - generic [ref=e61]: Available in English & Spanish — También en español
+      - generic [ref=e62]:
+        - paragraph [ref=e63]: "\"This is about more than chords — it's about finding your way home.\""
+        - paragraph [ref=e64]: Built by a certified peer support specialist who found his way back through sound.
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - text: Free Guide
+            - heading "The Emotional Star Map" [level=3] [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e71]: Free
+            - text: Delivered to your inbox
+          - paragraph [ref=e72]: The original 6-page guide to mapping seven emotional territories onto the musical modes. Includes the Quick-Start Process and The 4 Emotional Bridges. No music background needed — just honesty about how you feel.
+          - generic [ref=e73]:
+            - generic [ref=e74]: What's Included
+            - list [ref=e75]:
+              - listitem [ref=e76]:
+                - img [ref=e78]
+                - text: 6-page digital guide
+              - listitem [ref=e81]:
+                - img [ref=e83]
+                - text: Quick-Start Process
+              - listitem [ref=e86]:
+                - img [ref=e88]
+                - text: The 4 Emotional Bridges
+          - list [ref=e93]:
+            - listitem [ref=e94]:
+              - img [ref=e95]
+              - text: The 7 Emotional Palettes mapped to modes
+            - listitem [ref=e97]:
+              - img [ref=e98]
+              - text: The Quick-Start Process
+            - listitem [ref=e100]:
+              - img [ref=e101]
+              - text: The 4 Emotional Bridges
+            - listitem [ref=e103]:
+              - img [ref=e104]
+              - text: Journaling prompts for each mode
+            - listitem [ref=e106]:
+              - img [ref=e107]
+              - text: No music background required
+          - button "Download Free Guide" [ref=e110] [cursor=pointer]:
+            - text: Download Free Guide
+            - img [ref=e111]
+        - generic [ref=e113]:
+          - generic [ref=e114]: Recommended
+          - generic [ref=e115]:
+            - text: Emotional Processing System
+            - 'heading "The Emotional Star Map: Songwriter''s Edition" [level=3] [ref=e116]'
+          - generic [ref=e117]:
+            - generic [ref=e119]: $27
+            - text: One-time purchase
+          - paragraph [ref=e120]: The full system for turning a heavy feeling into a finished song. Everything you need to move from stuck to sonically honest.
+          - generic [ref=e121]:
+            - generic [ref=e122]: What's Included
+            - list [ref=e123]:
+              - listitem [ref=e124]:
+                - img [ref=e126]
+                - text: The Processing Guide — A structured container for emotional excavation and self-regulation.
+              - listitem [ref=e129]:
+                - img [ref=e131]
+                - text: Notion Template — a digital archive to track your song's emotional growth.
+              - listitem [ref=e134]:
+                - img [ref=e136]
+                - text: Emotional Landscapes — A map for identifying and honoring the specific "color" of your current internal state.
+              - listitem [ref=e140]:
+                - img [ref=e142]
+                - text: Transition Frameworks — The roadmap for safely moving through heavy emotions without bypassing the truth of the feeling.
+          - list [ref=e147]:
+            - listitem [ref=e148]:
+              - img [ref=e149]
+              - text: Interactive Notion Workspace (Duplicatable)
+            - listitem [ref=e151]:
+              - img [ref=e152]
+              - text: 5 Structured Song Feeling Journal Sessions
+            - listitem [ref=e154]:
+              - img [ref=e155]
+              - text: "\"Star Note\" deep-dive for every palette"
+            - listitem [ref=e157]:
+              - img [ref=e158]
+              - text: Printable PDF Workbook (22 pages)
+            - listitem [ref=e160]:
+              - img [ref=e161]
+              - text: Modal Listening Playlist & Chord Charts
+          - link "Get the Full System — $27" [ref=e164] [cursor=pointer]:
+            - /url: https://titosilversax.gumroad.com/l/thestarmap
+            - text: Get the Full System — $27
+            - img [ref=e165]
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - text: Digital Product
+            - heading "The Sound of Your Grief" [level=3] [ref=e169]
+          - generic [ref=e170]:
+            - generic [ref=e172]: $47
+            - text: One-time purchase
+          - paragraph [ref=e173]: A sound companion for the grief you can't put into words. A 30-minute healing Cuento and body-mapping workbook that helps you locate where grief lives — and which modes carry it best.
+          - generic [ref=e174]:
+            - generic [ref=e175]: What's Included
+            - list [ref=e176]:
+              - listitem [ref=e177]:
+                - img [ref=e179]
+                - text: 30-min healing soundscape
+              - listitem [ref=e181]:
+                - img [ref=e183]
+                - text: 20-page companion workbook
+              - listitem [ref=e186]:
+                - img [ref=e188]
+                - text: Reflection prompts
+          - list [ref=e191]:
+            - listitem [ref=e192]:
+              - img [ref=e193]
+              - text: 30-minute original composition
+            - listitem [ref=e195]:
+              - img [ref=e196]
+              - text: Companion workbook (PDF)
+            - listitem [ref=e198]:
+              - img [ref=e199]
+              - text: Body mapping exercises
+            - listitem [ref=e201]:
+              - img [ref=e202]
+              - text: Mode-grief correlations
+            - listitem [ref=e204]:
+              - img [ref=e205]
+              - text: Lifetime access
+          - button "Get early access" [ref=e208] [cursor=pointer]:
+            - text: Get early access
+            - img [ref=e209]
+      - generic [ref=e211]:
+        - generic [ref=e212]:
+          - generic [ref=e213]: The Journey
+          - heading "How We Work Together" [level=3] [ref=e214]
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]: "01"
+            - heading "Reach Out" [level=4] [ref=e218]
+            - paragraph [ref=e219]: Send me a voice memo on Instagram or drop me an email. Tell me what you're navigating and what you're hoping to find.
+            - img [ref=e221]
+          - generic [ref=e223]:
+            - generic [ref=e224]: "02"
+            - heading "We Map It" [level=4] [ref=e225]
+            - paragraph [ref=e226]: If we decide to work together, we'll map your emotional landscape and identify which modes and sounds resonate with your experience.
+            - img [ref=e228]
+          - generic [ref=e230]:
+            - generic [ref=e231]: "03"
+            - heading "Sound Meets You" [level=4] [ref=e232]
+            - paragraph [ref=e233]: Through our sessions, the music becomes a container — a place to feel, process, and begin to move through what you're carrying.
+      - generic [ref=e234]:
+        - generic [ref=e235]:
+          - generic [ref=e236]: Questions
+          - heading "Frequently Asked" [level=3] [ref=e237]
+        - generic [ref=e238]:
+          - heading "What is peer support, and how is it different from therapy?" [level=3] [ref=e240]:
+            - button "What is peer support, and how is it different from therapy?" [ref=e241] [cursor=pointer]:
+              - text: What is peer support, and how is it different from therapy?
+              - img
+          - heading "Do I need a music background to work with you?" [level=3] [ref=e243]:
+            - button "Do I need a music background to work with you?" [ref=e244] [cursor=pointer]:
+              - text: Do I need a music background to work with you?
+              - img
+          - heading "What are modal frameworks?" [level=3] [ref=e246]:
+            - button "What are modal frameworks?" [ref=e247] [cursor=pointer]:
+              - text: What are modal frameworks?
+              - img
+          - heading "How does the sliding scale work?" [level=3] [ref=e249]:
+            - button "How does the sliding scale work?" [ref=e250] [cursor=pointer]:
+              - text: How does the sliding scale work?
+              - img
+          - heading "Can I combine offerings?" [level=3] [ref=e252]:
+            - button "Can I combine offerings?" [ref=e253] [cursor=pointer]:
+              - text: Can I combine offerings?
+              - img
+      - generic [ref=e254]:
+        - generic [ref=e255]:
+          - blockquote [ref=e256]: "\"Every mode is a color of emotion. Every chord is a feeling crystallized.\""
+          - generic [ref=e257]: Ready to Go Deeper?
+          - heading "High-Touch Human Upgrades" [level=3] [ref=e258]
+          - paragraph [ref=e259]: The digital tools are your foundation. When you're ready for live, guided work — this is where we meet.
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - text: 90-Day Intensive
+            - heading "The Deep Navigation" [level=4] [ref=e262]
+            - paragraph [ref=e263]: A 90-day private container to find your voice through life's heaviest transitions — grief, identity loss, burnout, or cultural disconnection. Guided through music, modal frameworks, and peer-supported practice.
+            - list [ref=e264]:
+              - listitem [ref=e265]:
+                - img [ref=e266]
+                - text: 6 one-on-one sessions over 90 days
+              - listitem [ref=e268]:
+                - img [ref=e269]
+                - text: Custom Emotional Star Map
+              - listitem [ref=e271]:
+                - img [ref=e272]
+                - text: Original saxophone recording made for you
+              - listitem [ref=e274]:
+                - img [ref=e275]
+                - text: Async voice note support between sessions
+              - listitem [ref=e277]:
+                - img [ref=e278]
+                - text: Bilingual — English & Spanish
+              - listitem [ref=e280]:
+                - img [ref=e281]
+                - text: Sliding scale pricing
+            - generic [ref=e283]:
+              - button "Apply for a spot" [ref=e284] [cursor=pointer]:
+                - text: Apply for a spot
+                - img [ref=e285]
+              - button "Send a voice memo first" [ref=e287] [cursor=pointer]:
+                - text: Send a voice memo first
+                - img [ref=e288]
+          - generic [ref=e290]:
+            - text: Single Sessions
+            - heading "Modal Sound Sessions" [level=4] [ref=e291]
+            - paragraph [ref=e292]: A live soundscape built around exactly where you are emotionally — no script, no agenda, just sound meeting you. Created in real-time to support regulation, release, or reflection.
+            - list [ref=e293]:
+              - listitem [ref=e294]:
+                - img [ref=e295]
+                - text: 60-minute live improvisation
+              - listitem [ref=e297]:
+                - img [ref=e298]
+                - text: Pre-session intention setting
+              - listitem [ref=e300]:
+                - img [ref=e301]
+                - text: Post-session integration notes
+              - listitem [ref=e303]:
+                - img [ref=e304]
+                - text: Recording of your session
+              - listitem [ref=e306]:
+                - img [ref=e307]
+                - text: Available in-person or virtual
+              - listitem [ref=e309]:
+                - img [ref=e310]
+                - text: $150 per session
+            - button "Join the waitlist" [ref=e312] [cursor=pointer]:
+              - text: Join the waitlist
+              - img [ref=e313]
+      - generic [ref=e315]:
+        - paragraph [ref=e316]: Not sure where to start?
+        - button "Drop me a line" [ref=e317] [cursor=pointer]:
+          - text: Drop me a line
+          - img [ref=e318]
+    - generic [ref=e324]:
+      - paragraph [ref=e325]: get in touch
+      - heading "Let's talk." [level=2] [ref=e326]
+      - paragraph [ref=e327]: Whether you have questions, want to work together, or just want to say hi — I'd love to hear from you.
+      - link "hello@titodreamingwith.me" [ref=e328] [cursor=pointer]:
+        - /url: mailto:hello@titodreamingwith.me
+    - generic [ref=e330]:
+      - generic [ref=e331]:
+        - heading "tito dreaming with me" [level=3] [ref=e332]
+        - paragraph [ref=e333]: Healing guidance through music, peer support, and lived experience.
+      - generic [ref=e334]:
+        - link "YouTube" [ref=e335] [cursor=pointer]:
+          - /url: https://youtube.com/@titosilversax
+          - img [ref=e337]
+          - generic [ref=e340]: YouTube
+          - img [ref=e341]
+        - link "Instagram" [ref=e345] [cursor=pointer]:
+          - /url: https://instagram.com/titosilversax
+          - img [ref=e347]
+          - generic [ref=e350]: Instagram
+          - img [ref=e351]
+        - link "Bandcamp" [ref=e355] [cursor=pointer]:
+          - /url: https://titosilversax.bandcamp.com/
+          - img [ref=e357]
+          - generic [ref=e361]: Bandcamp
+          - img [ref=e362]
+      - generic [ref=e366]:
+        - button "Listen" [ref=e367] [cursor=pointer]
+        - button "Offerings" [ref=e368] [cursor=pointer]
+        - button "Contact" [ref=e369] [cursor=pointer]
+        - link "Privacy" [ref=e370] [cursor=pointer]:
+          - /url: /titodreamingwithme/privacy
+        - link "Terms" [ref=e371] [cursor=pointer]:
+          - /url: /titodreamingwithme/terms
+      - link "hello@titodreamingwith.me" [ref=e373] [cursor=pointer]:
+        - /url: mailto:hello@titodreamingwith.me
+      - paragraph [ref=e375]: This is peer support, not therapy or medical treatment.
+      - paragraph [ref=e378]: © 2026 Tito Dreaming With Me

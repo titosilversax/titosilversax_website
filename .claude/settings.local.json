@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(node -e \"require\\('puppeteer'\\)\")",
-      "Bash(node -e \"require\\('playwright'\\)\")"
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "Bash(python3 -m http.server 8743)",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot"
     ]
   }
 }

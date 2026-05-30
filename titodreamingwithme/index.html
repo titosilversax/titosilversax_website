@@ -1,38 +1,1257 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Emotional Star Map | Tito Dreaming With Me</title>
-    <meta name="description" content="Stop guessing chords. Use the Emotional Star Map to translate raw emotion into music. No theory degree required." />
-    <link rel="icon" type="image/png" href="/titodreamingwithme/favicon.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Emotional Star Map | Tito Dreaming With Me</title>
+  <meta name="description" content="Stop guessing chords. Use the Emotional Star Map to translate raw emotion into music. No theory degree required." />
+  <link rel="icon" type="image/png" href="/titodreamingwithme/favicon.png" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://titosilversax.com/titodreamingwithme/" />
-    <meta property="og:title" content="Write songs that sound exactly how you feel." />
-    <meta property="og:description" content="Damn the rules! It's the feeling that counts. Get the Songwriter's Edition toolkit today." />
-    <meta property="og:image" content="https://titosilversax.com/titodreamingwithme/og-preview.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://titosilversax.com/titodreamingwithme/" />
+  <meta property="og:title" content="Write songs that sound exactly how you feel." />
+  <meta property="og:description" content="Damn the rules! It's the feeling that counts. Get the Songwriter's Edition toolkit today." />
+  <meta property="og:image" content="https://titosilversax.com/titodreamingwithme/og-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Write songs that sound exactly how you feel." />
-    <meta name="twitter:description" content="Damn the rules! It's the feeling that counts. Get the Songwriter's Edition toolkit today." />
-    <meta name="twitter:image" content="https://titosilversax.com/titodreamingwithme/og-preview.png" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF1Y8CMTMR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SF1Y8CMTMR');
+  </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF1Y8CMTMR"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SF1Y8CMTMR');
-    </script>
-    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
-    <script type="module" crossorigin src="/titodreamingwithme/assets/index-BuYdGhB9.js"></script>
-    <link rel="stylesheet" crossorigin href="/titodreamingwithme/assets/index-Dgg9DB6u.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #06070f;
+      --surface:      #0b0e1c;
+      --surface-2:    #111829;
+      --purple-glow:  rgba(139, 92, 246, 0.14);
+      --blue-glow:    rgba(59, 130, 246, 0.1);
+      --emerald-glow: rgba(16, 185, 129, 0.1);
+      --gold:         #c9963a;
+      --gold-bright:  #e8b94f;
+      --gold-glow:    rgba(201, 150, 58, 0.25);
+      --text:         #dde4f2;
+      --text-muted:   #8898b8;
+      --divider:      rgba(139, 92, 246, 0.22);
+      --ff-head:      'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --ff-body:      'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .container--wide {
+      max-width: 960px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--divider), transparent);
+      margin: 64px 0;
+    }
+
+    .section-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      font-family: var(--ff-head);
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: #eef1fb;
+      margin-bottom: 20px;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(6,7,15,0.95) 0%, rgba(6,7,15,0) 100%);
+      backdrop-filter: blur(0px);
+      transition: backdrop-filter 0.3s, background 0.3s;
+    }
+
+    .nav.scrolled {
+      background: rgba(6, 7, 15, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .nav-logo {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-style: italic;
+      font-weight: 400;
+      color: #eef1fb;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/titodreamingwithme/background.webp');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.18;
+      z-index: 0;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 100% 60% at 50% 100%, var(--bg) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(30, 58, 138, 0.3) 0%, transparent 70%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .hero-headline {
+      font-family: var(--ff-head);
+      font-size: clamp(2.4rem, 7vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: #eef1fb;
+      margin-bottom: 24px;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      font-weight: 300;
+      color: #b8c8e8;
+    }
+
+    .hero-sub {
+      font-family: var(--ff-head);
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-style: italic;
+      font-weight: 300;
+      color: #b8c8e8;
+      line-height: 1.65;
+      margin-bottom: 40px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #b8862e 0%, #e0ac48 50%, #b8862e 100%);
+      background-size: 200% 100%;
+      color: #0b0a06;
+      font-family: var(--ff-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      transition: background-position 0.4s, box-shadow 0.3s, transform 0.15s;
+      box-shadow: 0 0 28px var(--gold-glow), 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    .btn-primary:hover {
+      background-position: 100% 0;
+      box-shadow: 0 0 44px var(--gold-glow), 0 6px 24px rgba(0,0,0,0.5);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: var(--ff-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 3px;
+      border: 1px solid rgba(136, 152, 184, 0.25);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      color: var(--text);
+      border-color: rgba(136, 152, 184, 0.5);
+    }
+
+    .hero-quote {
+      font-family: var(--ff-head);
+      font-size: 0.95rem;
+      font-style: italic;
+      color: rgba(136, 152, 184, 0.6);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 80px 0;
+      background-image: radial-gradient(ellipse 80% 60% at 80% 50%, rgba(6, 78, 59, 0.1) 0%, transparent 60%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -16px;
+      border-radius: 4px;
+      background: radial-gradient(ellipse at center, var(--purple-glow) 0%, transparent 70%);
+      filter: blur(24px);
+    }
+
+    .about-img {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      border-radius: 3px;
+      box-shadow:
+        0 0 0 1px rgba(139, 92, 246, 0.18),
+        0 8px 40px rgba(0,0,0,0.6);
+      position: relative;
+      display: block;
+    }
+
+    .about-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .about-heading {
+      font-family: var(--ff-head);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: #eef1fb;
+      margin-bottom: 12px;
+    }
+
+    .about-sub {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .about-body {
+      font-size: 1rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ── OFFERINGS ── */
+    .offerings {
+      padding: 80px 0;
+      background-image: radial-gradient(ellipse 90% 50% at 50% 50%, rgba(76, 29, 149, 0.08) 0%, transparent 65%);
+    }
+
+    .offerings-header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .offerings-subtext {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .offerings-avail {
+      font-size: 0.78rem;
+      color: rgba(136, 152, 184, 0.5);
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-bottom: 48px;
+    }
+
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .offering-card {
+      background: linear-gradient(135deg, var(--surface) 0%, #0f1428 100%);
+      border: 1px solid rgba(139, 92, 246, 0.18);
+      border-radius: 6px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offering-card--recommended {
+      border-color: rgba(201, 150, 58, 0.35);
+    }
+
+    .offering-card--recommended::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(201, 150, 58, 0.08) 0%, transparent 70%);
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+
+    .card-badge--free {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .card-badge--recommended {
+      background: rgba(201, 150, 58, 0.15);
+      color: var(--gold-bright);
+      border: 1px solid rgba(201, 150, 58, 0.3);
+    }
+
+    .card-type {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: var(--ff-head);
+      font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+      font-weight: 600;
+      color: #eef1fb;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .card-price {
+      font-family: var(--ff-head);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--gold-bright);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .card-price-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      letter-spacing: 0.03em;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .card-includes-label {
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .card-list {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .card-list li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding: 6px 0;
+      padding-left: 18px;
+      position: relative;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+      line-height: 1.5;
+    }
+
+    .card-list li:last-child { border-bottom: none; }
+
+    .card-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: rgba(201, 150, 58, 0.5);
+      font-size: 0.8rem;
+    }
+
+    /* ── PROCESS ── */
+    .process {
+      padding: 80px 0;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 40px;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 20px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    }
+
+    .process-step:last-child { border-bottom: none; }
+
+    .process-num {
+      font-family: var(--ff-head);
+      font-size: 1.4rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(139, 92, 246, 0.45);
+      padding-top: 3px;
+    }
+
+    .process-title {
+      font-family: var(--ff-head);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #eef1fb;
+      margin-bottom: 6px;
+    }
+
+    .process-body {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── SERVICES ── */
+    .services {
+      padding: 80px 0;
+      background-image: radial-gradient(ellipse 80% 50% at 20% 50%, rgba(30, 58, 138, 0.1) 0%, transparent 60%);
+    }
+
+    .services-pullquote {
+      font-family: var(--ff-head);
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(184, 200, 232, 0.7);
+      text-align: center;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .services-subhead {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .service-card {
+      background: linear-gradient(135deg, var(--surface) 0%, #0f1428 100%);
+      border: 1px solid rgba(59, 130, 246, 0.15);
+      border-radius: 6px;
+      padding: 36px 32px;
+    }
+
+    .service-type {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .service-title {
+      font-family: var(--ff-head);
+      font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+      font-weight: 600;
+      color: #eef1fb;
+      margin-bottom: 16px;
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .service-list li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding: 5px 0 5px 18px;
+      position: relative;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+    }
+
+    .service-list li:last-child { border-bottom: none; }
+
+    .service-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: rgba(59, 130, 246, 0.4);
+    }
+
+    .service-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* ── FAQ ── */
+    .faq {
+      padding: 80px 0;
+    }
+
+    .faq-list {
+      margin-top: 40px;
+    }
+
+    details.faq-item {
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    details.faq-item:first-child {
+      border-top: 1px solid rgba(139, 92, 246, 0.15);
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #dde4f2;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::marker { display: none; }
+
+    details.faq-item summary:hover { color: #eef1fb; }
+
+    .faq-icon {
+      flex-shrink: 0;
+      font-family: var(--ff-body);
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      width: 20px;
+      text-align: center;
+      transition: transform 0.25s;
+    }
+
+    details[open].faq-item .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 0 24px;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/titodreamingwithme/contact-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.06;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-heading {
+      font-family: var(--ff-head);
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 600;
+      color: #eef1fb;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .contact-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .contact-email {
+      font-family: var(--ff-head);
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      font-style: italic;
+      color: var(--gold-bright);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201, 150, 58, 0.35);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .contact-email:hover {
+      color: #fff;
+      border-color: var(--gold-bright);
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 48px 0 40px;
+      border-top: 1px solid var(--divider);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .footer-logo {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #eef1fb;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 240px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-social a:hover { color: var(--text); }
+
+    .footer-nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: var(--text); }
+
+    .footer-legal {
+      font-size: 0.72rem;
+      color: rgba(136, 152, 184, 0.4);
+      line-height: 1.7;
+    }
+
+    .footer-legal a {
+      color: rgba(136, 152, 184, 0.5);
+      text-decoration: none;
+    }
+
+    /* ── NOT SURE STRIP ── */
+    .strip {
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .strip p {
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 640px) {
+      .offerings-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid  { grid-template-columns: 1fr 1fr; }
+      .process-grid   { grid-template-columns: 1fr; }
+      .footer-grid    { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       NAV
+       ══════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a class="nav-logo" href="/titodreamingwithme/">tito dreaming with me</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#offerings">Offerings</a></li>
+      <li><a href="#services">Sessions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+  </script>
+
+  <!-- ══════════════════════════════
+       HERO
+       ══════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Tito Dreaming With Me &nbsp;·&nbsp; The Emotional Star Map</span>
+      <h1 class="hero-headline">
+        Write songs that sound<br><em>exactly how you feel.</em>
+      </h1>
+      <p class="hero-sub">
+        Stop losing the feeling that sparked your song to safe chord patterns.
+        Map your emotion directly to the music — no theory required.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="https://titosilversax.gumroad.com/l/thestarmap" target="_blank" rel="noopener">
+          Get the Songwriter's Edition — $27
+        </a>
+        <a class="btn-secondary" href="#offerings">Get the Free Guide</a>
+      </div>
+      <p class="hero-quote">"Damn the rules — it's the feeling that counts."</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════
+       ABOUT
+       ══════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container container--wide">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img class="about-img" src="/titodreamingwithme/portrait.jpg" alt="Tito with saxophone" width="340">
+        </div>
+        <div>
+          <span class="about-tag">Peer Support &nbsp;·&nbsp; Modal Music</span>
+          <h2 class="about-heading">If music has ever felt like the only thing that understood you</h2>
+          <p class="about-sub">You're in the right place.</p>
+          <p class="about-body">
+            I'm Tito — a state-certified peer support specialist and saxophonist.
+            I build quiet, modal soundscapes and honest conversations for people
+            navigating heavy seasons.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════
+       OFFERINGS
+       ══════════════════════════════ -->
+  <section class="offerings" id="offerings">
+    <div class="container container--wide">
+      <div class="offerings-header">
+        <span class="section-label">The Path</span>
+        <h2 class="section-heading">Choose Your Starting Point</h2>
+      </div>
+      <p class="offerings-subtext">Every tool here was built feeling-first — to help you write music that actually sounds like you.</p>
+      <p class="offerings-avail">Available in English &amp; Spanish &nbsp;·&nbsp; También en español</p>
+
+      <div class="offerings-grid">
+
+        <!-- Free Guide -->
+        <div class="offering-card">
+          <span class="card-badge card-badge--free">Free Guide</span>
+          <span class="card-type">Digital Download</span>
+          <h3 class="card-title">The Emotional Star Map</h3>
+          <div class="card-price" style="font-size:1.4rem; margin-top:8px;">Free</div>
+          <p class="card-price-note">Delivered to your inbox</p>
+          <p class="card-desc">
+            The original 6-page guide to mapping seven emotional territories onto
+            the musical modes. Includes the Quick-Start Process and The 4 Emotional
+            Bridges. No music background needed — just honesty about how you feel.
+          </p>
+          <span class="card-includes-label">What's Included</span>
+          <ul class="card-list">
+            <li>6-page digital guide</li>
+            <li>The 7 Emotional Palettes mapped to modes</li>
+            <li>The Quick-Start Process</li>
+            <li>The 4 Emotional Bridges</li>
+            <li>Journaling prompts for each mode</li>
+            <li>No music background required</li>
+          </ul>
+          <!-- UPDATE: replace href with your Kit/email opt-in form link -->
+          <a class="btn-secondary" href="#contact" style="display:inline-block; width:100%; text-align:center;">
+            Download Free Guide
+          </a>
+        </div>
+
+        <!-- Songwriter's Edition -->
+        <div class="offering-card offering-card--recommended">
+          <span class="card-badge card-badge--recommended">Recommended</span>
+          <span class="card-type">Emotional Processing System</span>
+          <h3 class="card-title">The Emotional Star Map: Songwriter's Edition</h3>
+          <div class="card-price">$27</div>
+          <p class="card-price-note">One-time purchase</p>
+          <p class="card-desc">
+            The full system for turning a heavy feeling into a finished song.
+            Everything you need to move from stuck to sonically honest.
+          </p>
+          <span class="card-includes-label">What's Included</span>
+          <ul class="card-list">
+            <li>The Processing Guide — structured emotional excavation</li>
+            <li>Interactive Notion Workspace (duplicatable)</li>
+            <li>Emotional Landscapes — map the color of your current state</li>
+            <li>Transition Frameworks — move through heavy emotions safely</li>
+            <li>5 Structured Song Feeling Journal Sessions</li>
+            <li>"Star Note" deep-dive for every palette</li>
+            <li>Printable PDF Workbook (22 pages)</li>
+            <li>Modal Listening Playlist &amp; Chord Charts</li>
+          </ul>
+          <a class="btn-primary" href="https://titosilversax.gumroad.com/l/thestarmap" target="_blank" rel="noopener" style="display:inline-block; width:100%; text-align:center;">
+            Get the Full System — $27
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════
+       PROCESS
+       ══════════════════════════════ -->
+  <section class="process" id="process">
+    <div class="container">
+      <span class="section-label">The Journey</span>
+      <h2 class="section-heading">How We Work Together</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="process-num">01</span>
+          <div>
+            <h3 class="process-title">Reach Out</h3>
+            <p class="process-body">Send me a voice memo on Instagram or drop me an email. Tell me what you're navigating and what you're hoping to find.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="process-num">02</span>
+          <div>
+            <h3 class="process-title">We Map It</h3>
+            <p class="process-body">If we decide to work together, we'll map your emotional landscape and identify which modes and sounds resonate with your experience.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="process-num">03</span>
+          <div>
+            <h3 class="process-title">Sound Meets You</h3>
+            <p class="process-body">Through our sessions, the music becomes a container — a place to feel, process, and begin to move through what you're carrying.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════
+       SERVICES
+       ══════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container container--wide">
+      <p class="services-pullquote">"Every mode is a color of emotion. Every chord is a feeling crystallized."</p>
+      <div class="services-subhead">
+        <span class="section-label">High-Touch Human Upgrades</span>
+        <h2 class="section-heading">Ready to Go Deeper?</h2>
+      </div>
+      <p style="font-size:0.95rem; color:var(--text-muted); text-align:center; margin-bottom:48px; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.75;">
+        The digital tools are your foundation. When you're ready for live, guided work — this is where we meet.
+      </p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <span class="service-type">90-Day Intensive</span>
+          <h3 class="service-title">The Deep Navigation</h3>
+          <p class="service-desc">
+            A 90-day private container to find your voice through life's heaviest transitions —
+            grief, identity loss, burnout, or cultural disconnection. Guided through music,
+            modal frameworks, and peer-supported practice.
+          </p>
+          <ul class="service-list">
+            <li>6 one-on-one sessions over 90 days</li>
+            <li>Custom Emotional Star Map</li>
+            <li>Original saxophone recording made for you</li>
+            <li>Async voice note support between sessions</li>
+            <li>Bilingual — English &amp; Spanish</li>
+            <li>Sliding scale pricing</li>
+          </ul>
+          <div class="service-ctas">
+            <a class="btn-primary" href="mailto:hello@titodreamingwith.me">Apply for a spot</a>
+            <a class="btn-secondary" href="https://instagram.com/titosilversax" target="_blank" rel="noopener">Send a voice memo</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-type">Single Sessions</span>
+          <h3 class="service-title">Modal Sound Sessions</h3>
+          <p class="service-desc">
+            A live soundscape built around exactly where you are emotionally — no script,
+            no agenda, just sound meeting you. Created in real-time to support regulation,
+            release, or reflection.
+          </p>
+          <ul class="service-list">
+            <li>60-minute live improvisation</li>
+            <li>Pre-session intention setting</li>
+            <li>Post-session integration notes</li>
+            <li>Recording of your session</li>
+            <li>Available in-person or virtual</li>
+            <li>$150 per session</li>
+          </ul>
+          <div class="service-ctas">
+            <a class="btn-primary" href="mailto:hello@titodreamingwith.me">Join the waitlist</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════
+       FAQ
+       ══════════════════════════════ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <span class="section-label">Questions</span>
+      <h2 class="section-heading">Frequently Asked</h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>
+            What is peer support, and how is it different from therapy?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Peer support is a relationship between two people with shared lived experience.
+            I'm not a therapist or clinician — I'm a state-certified peer support specialist
+            who has navigated my own heavy seasons and trained to walk alongside others in theirs.
+            Peer support is about connection, not diagnosis.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Do I need a music background to work with you?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Not at all. The Emotional Star Map and all of my tools are designed for people
+            who feel music deeply but may have no formal training. If you can feel, you can use these.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            What are modal frameworks?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Musical modes are different scales that carry distinct emotional colors. The Dorian
+            mode feels different from the Phrygian — and that difference maps to something real
+            in how we feel. Modal frameworks are a way of using those emotional qualities intentionally
+            in your music and your healing process.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            How does the sliding scale work?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            For the 90-Day Intensive, I offer a range of pricing based on what you can honestly afford.
+            I believe this work should be accessible. When you apply, we'll talk about what works for you.
+          </p>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Can I combine offerings?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-answer">
+            Yes. Many people start with the free guide or Songwriter's Edition, then move into
+            sessions when they're ready. There's no prescribed path — just wherever you are.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════
+       NOT SURE STRIP
+       ══════════════════════════════ -->
+  <div class="strip">
+    <p>Not sure where to start?</p>
+    <a class="btn-secondary" href="mailto:hello@titodreamingwith.me">Drop me a line</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ══════════════════════════════
+       CONTACT
+       ══════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <span class="section-label">Get in touch</span>
+      <h2 class="contact-heading">Let's talk.</h2>
+      <p class="contact-sub">
+        Whether you have questions, want to work together, or just want to say hi —
+        I'd love to hear from you.
+      </p>
+      <a class="contact-email" href="mailto:hello@titodreamingwith.me">hello@titodreamingwith.me</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FOOTER
+       ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container container--wide">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-logo">tito dreaming with me</span>
+          <p class="footer-tagline">Healing guidance through music, peer support, and lived experience.</p>
+        </div>
+        <div>
+          <div class="footer-social">
+            <a href="https://youtube.com/@titosilversax" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://instagram.com/titosilversax" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://titosilversax.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-nav">
+            <a href="#offerings">Offerings</a>
+            <a href="#services">Sessions</a>
+            <a href="#contact">Contact</a>
+            <a href="/titodreamingwithme/privacy">Privacy</a>
+            <a href="/titodreamingwithme/terms">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:36px; padding-top:24px; border-top:1px solid var(--divider);">
+        <p class="footer-legal">
+          <a href="mailto:hello@titodreamingwith.me">hello@titodreamingwith.me</a>
+          &nbsp;·&nbsp; This is peer support, not therapy or medical treatment.
+          &nbsp;·&nbsp; © 2026 Tito Dreaming With Me
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
