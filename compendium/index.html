@@ -82,7 +82,12 @@
     }
 
     body {
-      background-color: transparent;
+      background-color: var(--bg);
+      background-image: url('/images/background.webp?v=2');
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: var(--text);
       font-family: var(--ff-body);
       font-size: 16px;
@@ -91,21 +96,6 @@
       -moz-osx-font-smoothing: grayscale;
       opacity: 0;
       animation: pageEnter 1.2s ease-out 0.3s forwards;
-    }
-
-    .bg-image {
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      background: url('/images/background.webp?v=2') center bottom / cover no-repeat;
-    }
-
-    .bg-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(6,7,15,0.3) 0%, rgba(6,7,15,0.75) 100%);
-      pointer-events: none;
     }
 
     @keyframes pageEnter {
@@ -562,12 +552,6 @@
   </style>
 </head>
 <body>
-
-  <!-- Background image -->
-  <div class="bg-image"></div>
-
-  <!-- Dark overlay -->
-  <div class="bg-overlay"></div>
 
   <!-- Vignette -->
   <div class="vignette"></div>
