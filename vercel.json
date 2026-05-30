@@ -4,6 +4,9 @@
     { "source": "/", "destination": "/titodreamingwithme", "permanent": false }
   ],
   "rewrites": [
+    { "source": "/titodreamingwithme/assets/:path*", "destination": "/titodreamingwithme/assets/:path*" },
+    { "source": "/titodreamingwithme/privacy/:path*", "destination": "/titodreamingwithme/privacy/:path*" },
+    { "source": "/titodreamingwithme/terms/:path*", "destination": "/titodreamingwithme/terms/:path*" },
     { "source": "/titodreamingwithme/:path*", "destination": "/titodreamingwithme/index.html" }
   ],
   "headers": [
