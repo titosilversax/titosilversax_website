@@ -448,18 +448,17 @@
     /* ── FOOTER ── */
     .site-back {
       position: fixed;
-      top: 20px;
-      left: 24px;
+      top: 16px;
+      left: 20px;
       z-index: 100;
-      font-size: 0.75rem;
-      font-family: var(--ff-body);
-      letter-spacing: 0.05em;
-      color: var(--text-muted);
       text-decoration: none;
-      transition: color 0.2s;
+      display: block;
+      opacity: 0.75;
+      transition: opacity 0.2s;
     }
 
-    .site-back:hover { color: var(--text); }
+    .site-back img { display: block; height: 40px; width: auto; }
+    .site-back:hover { opacity: 1; }
 
     .footer {
       padding: 48px 0 80px;
@@ -500,7 +499,8 @@
       .price-block { padding: 36px 20px; }
       .inside-item { gap: 16px; padding: 24px 0; }
       .hero-sub { margin-bottom: 32px; }
-      .site-back { font-size: 0.7rem; top: 16px; left: 16px; }
+      .site-back { top: 12px; left: 16px; }
+      .site-back img { height: 32px; }
     }
 
     @media (min-width: 600px) {
@@ -579,7 +579,9 @@
   <!-- Vignette -->
   <div class="vignette"></div>
 
-  <a class="site-back" href="/">← Tito Silversax</a>
+  <a class="site-back" href="/">
+    <img src="/images/logo.webp" alt="Tito Silversax" width="40" height="40">
+  </a>
 
   <!-- GTM noscript — replace GTM-XXXXXXX -->
   <noscript>

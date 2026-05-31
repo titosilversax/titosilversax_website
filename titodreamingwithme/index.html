@@ -129,13 +129,15 @@
     }
 
     .nav-logo {
-      font-family: var(--ff-head);
-      font-size: 1.1rem;
-      font-style: italic;
-      font-weight: 400;
-      color: #eef1fb;
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      letter-spacing: 0.02em;
+    }
+
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -945,7 +947,9 @@
        NAV
        ══════════════════════════════ -->
   <nav class="nav" id="nav">
-    <a class="nav-logo" href="/titodreamingwithme/">Tito Silversax</a>
+    <a class="nav-logo" href="/titodreamingwithme/">
+      <img src="/images/logo.webp" alt="Tito Silversax" width="44" height="44">
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#offerings">Offerings</a></li>
