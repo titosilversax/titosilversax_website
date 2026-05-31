@@ -6,10 +6,12 @@
   <title>Terms of Use — Tito Silversax</title>
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,19 +29,13 @@
 
     body {
       background-color: var(--bg);
-      background-image: url('/images/background.webp?v=2');
-      background-size: cover;
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-image: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(30, 58, 138, 0.15) 0%, transparent 60%);
       color: var(--text);
       font-family: var(--ff-body);
       font-size: 16px;
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
-
-
 
     .container {
       width: 100%;
@@ -48,7 +44,6 @@
       padding: 0 24px;
     }
 
-    /* ── HEADER ── */
     .doc-header {
       padding: 56px 0 40px;
       border-bottom: 1px solid var(--divider);
@@ -92,7 +87,6 @@
       color: var(--text-muted);
     }
 
-    /* ── CONTENT ── */
     .doc-body { padding-bottom: 80px; }
 
     .doc-body h2 {
@@ -141,7 +135,20 @@
       font-weight: 500;
     }
 
-    /* ── FOOTER ── */
+    .notice {
+      background: rgba(139, 92, 246, 0.08);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+
+    .notice p {
+      font-size: 0.92rem;
+      color: #b8c8e8;
+      margin-bottom: 0;
+    }
+
     .doc-footer {
       border-top: 1px solid var(--divider);
       padding: 32px 0 48px;
@@ -162,15 +169,12 @@
 
     .doc-footer a:hover { color: var(--text); }
   </style>
-  <!-- Vercel Analytics -->
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-
   <div class="container">
 
     <header class="doc-header">
-      <a class="back-link" href="/compendium">Back to the compendium</a>
+      <a class="back-link" href="/">titosilversax.com</a>
       <span class="doc-label">Legal</span>
       <h1 class="doc-title">Terms of Use</h1>
       <p class="doc-meta">Effective date: May 15, 2026 &nbsp;·&nbsp; titosilversax.com</p>
@@ -178,15 +182,34 @@
 
     <main class="doc-body">
 
-      <p>Please read these Terms of Use carefully before purchasing or using any digital products offered through this website. By completing a purchase, you agree to be bound by these terms.</p>
+      <p>Please read these Terms of Use carefully before purchasing any digital products or engaging with any services offered through this website. By making a purchase or booking a session, you agree to be bound by these terms.</p>
 
       <h2>1. Who We Are</h2>
-      <p>This website is operated by Alberto Martir, professionally known as Tito Silversax, based in Cleveland, Ohio, USA. References to "we," "us," or "our" refer to Alberto Martir / Tito Silversax.</p>
+      <p>This website is operated by Alberto Martir, professionally known as Tito Silversax, based in Cleveland, Ohio, USA. References to "we," "us," or "our" refer to Alberto Martir / Tito Silversax. We operate across two offerings on this domain:</p>
+      <ul>
+        <li><strong>titosilversax.com/compendium</strong> — The Saxophonist's Compendium (digital book)</li>
+        <li><strong>titosilversax.com/titodreamingwithme</strong> — The Emotional Star Map suite and peer support services</li>
+      </ul>
 
-      <h2>2. Digital Products</h2>
-      <p>Products sold through this site — including <em>The Saxophonist's Compendium</em> — are digital downloads delivered in PDF and/or EPUB format. Upon successful payment, you will receive access to download the file(s) via a link sent to your email address.</p>
+      <h2>2. Important Disclaimer — Peer Support Is Not Therapy</h2>
+      <div class="notice">
+        <p>All peer support services offered through this site are provided by a state-certified peer support specialist, not a licensed therapist, psychologist, or medical professional. Peer support is not a substitute for therapy, counseling, psychiatric treatment, or emergency mental health services. If you are in crisis, please contact the 988 Suicide &amp; Crisis Lifeline by calling or texting <strong>988</strong>.</p>
+      </div>
 
-      <h2>3. License Grant</h2>
+      <h2>3. Products &amp; Services Offered</h2>
+      <p><strong>Digital Products:</strong> We offer the following digital downloads:</p>
+      <ul>
+        <li>The Saxophonist's Compendium — PDF &amp; EPUB, $27, delivered via Kit (ConvertKit)</li>
+        <li>The Emotional Star Map — free 6-page guide, delivered via email</li>
+        <li>The Emotional Star Map: Songwriter's Edition — $27, delivered via Gumroad</li>
+      </ul>
+      <p><strong>Services:</strong> We offer the following live, human services:</p>
+      <ul>
+        <li>The Deep Navigation — 90-day peer support intensive, sliding scale pricing</li>
+        <li>Modal Sound Sessions — 60-minute live improvisation sessions, $150 per session</li>
+      </ul>
+
+      <h2>4. License for Digital Products</h2>
       <p>When you purchase a digital product, we grant you a personal, non-exclusive, non-transferable license to:</p>
       <ul>
         <li>Download and store the file(s) on your personal devices</li>
@@ -194,39 +217,40 @@
       </ul>
       <p>This license does not transfer ownership of the content. All intellectual property rights remain with Alberto Martir / Tito Silversax.</p>
 
-      <h2>4. Prohibited Uses</h2>
+      <h2>5. Prohibited Uses</h2>
       <p>You may not, under any circumstances:</p>
       <ul>
-        <li>Share, distribute, resell, or sublicense the file(s) to any third party</li>
-        <li>Upload the content to any file-sharing platform, torrent, or public server</li>
-        <li>Reproduce substantial portions of the content in any other publication or product</li>
-        <li>Use the content for commercial purposes without prior written permission</li>
+        <li>Share, distribute, resell, or sublicense digital products to any third party</li>
+        <li>Upload content to any file-sharing platform, torrent, or public server</li>
+        <li>Reproduce substantial portions of any product in another publication or commercial offering</li>
+        <li>Use any content for commercial purposes without prior written permission</li>
         <li>Remove or alter any copyright notices or author attributions</li>
       </ul>
 
-      <h2>5. Payment &amp; Delivery</h2>
-      <p>Payments are processed securely by Kit (formerly ConvertKit) and its payment partners. We do not store your payment card information. After payment is confirmed, a download link will be sent to the email address you provide. Please check your spam folder if the email does not arrive within 10 minutes.</p>
-      <p>If you experience any issue with delivery, contact us at <a href="mailto:hello@titosilversax.com">hello@titosilversax.com</a>.</p>
+      <h2>6. Payment &amp; Delivery</h2>
+      <p>Payments for digital products are processed by third-party providers — Kit (ConvertKit) for The Saxophonist's Compendium and Gumroad for The Emotional Star Map: Songwriter's Edition. We do not store your payment card information. Download links are sent to the email address you provide at checkout. Please check your spam folder if nothing arrives within 10 minutes.</p>
+      <p>Service pricing (The Deep Navigation, Modal Sound Sessions) is discussed and confirmed directly before any payment is collected.</p>
 
-      <h2>6. Refund Policy</h2>
-      <p>Because digital products are delivered immediately and cannot be "returned," all sales are final. However, if you experience a technical problem that prevents you from accessing the file(s), contact us within 30 days of purchase and we will work to resolve it or issue a refund at our discretion.</p>
+      <h2>7. Refund Policy</h2>
+      <p><strong>Digital products:</strong> Because digital files are delivered immediately, all sales are final. If you experience a technical problem preventing access, contact us within 30 days and we will resolve it or issue a refund at our discretion.</p>
+      <p><strong>Services:</strong> Cancellation and refund terms for live sessions are agreed upon individually at the time of booking. As a general policy, cancellations made with less than 24 hours' notice may not be eligible for a refund.</p>
 
-      <h2>7. Intellectual Property</h2>
-      <p>All content within our digital products — including text, diagrams, illustrations, and design — is the original work of Alberto Martir and is protected by United States and international copyright law. Unauthorized reproduction or distribution may result in civil and criminal penalties.</p>
+      <h2>8. Intellectual Property</h2>
+      <p>All content — including text, audio recordings, worksheets, templates, and design elements — is the original work of Alberto Martir and is protected by United States and international copyright law. Unauthorized reproduction or distribution may result in civil and criminal penalties.</p>
 
-      <h2>8. Disclaimer of Warranties</h2>
-      <p>Our digital products are provided "as is" without warranty of any kind, express or implied. We make no representation that the information contained in any product will meet your specific needs or produce any particular result in your musical practice.</p>
+      <h2>9. Disclaimer of Warranties</h2>
+      <p>Our products and services are provided "as is" without warranty of any kind, express or implied. We make no representation that any product or service will produce a specific outcome in your musical practice, emotional wellbeing, or creative process.</p>
 
-      <h2>9. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law, Alberto Martir / Tito Silversax shall not be liable for any indirect, incidental, or consequential damages arising from your use of our products or this website, even if advised of the possibility of such damages. Our total liability for any claim shall not exceed the amount you paid for the applicable product.</p>
+      <h2>10. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Alberto Martir / Tito Silversax shall not be liable for any indirect, incidental, or consequential damages arising from your use of our products or services. Our total liability for any claim shall not exceed the amount you paid for the applicable product or service.</p>
 
-      <h2>10. Governing Law</h2>
+      <h2>11. Governing Law</h2>
       <p>These Terms are governed by the laws of the State of Ohio, USA, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Cuyahoga County, Ohio.</p>
 
-      <h2>11. Changes to These Terms</h2>
+      <h2>12. Changes to These Terms</h2>
       <p>We reserve the right to update these Terms at any time. Changes will be posted on this page with an updated effective date. Continued use of the site or products after changes are posted constitutes acceptance of the revised Terms.</p>
 
-      <h2>12. Contact</h2>
+      <h2>13. Contact</h2>
       <p>Questions about these Terms? Reach us at <a href="mailto:hello@titosilversax.com">hello@titosilversax.com</a>.</p>
 
     </main>
@@ -234,12 +258,12 @@
     <footer class="doc-footer">
       <p>
         <a href="/compendium">The Saxophonist's Compendium</a> &nbsp;·&nbsp;
+        <a href="/titodreamingwithme">Tito Dreaming With Me</a> &nbsp;·&nbsp;
         <a href="/privacy">Privacy Policy</a><br>
         &copy; 2026 Alberto Martir / Tito Silversax. All rights reserved.
       </p>
     </footer>
 
   </div>
-
 </body>
 </html>

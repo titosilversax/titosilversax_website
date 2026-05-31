@@ -6,10 +6,12 @@
   <title>Privacy Policy — Tito Silversax</title>
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,8 +41,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-
-
     .container {
       width: 100%;
       max-width: 680px;
@@ -48,7 +48,6 @@
       padding: 0 24px;
     }
 
-    /* ── HEADER ── */
     .doc-header {
       padding: 56px 0 40px;
       border-bottom: 1px solid var(--divider);
@@ -92,7 +91,6 @@
       color: var(--text-muted);
     }
 
-    /* ── CONTENT ── */
     .doc-body { padding-bottom: 80px; }
 
     .doc-body h2 {
@@ -141,7 +139,20 @@
       font-weight: 500;
     }
 
-    /* ── FOOTER ── */
+    .notice {
+      background: rgba(139, 92, 246, 0.08);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+
+    .notice p {
+      font-size: 0.92rem;
+      color: #b8c8e8;
+      margin-bottom: 0;
+    }
+
     .doc-footer {
       border-top: 1px solid var(--divider);
       padding: 32px 0 48px;
@@ -162,15 +173,12 @@
 
     .doc-footer a:hover { color: var(--text); }
   </style>
-  <!-- Vercel Analytics -->
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-
   <div class="container">
 
     <header class="doc-header">
-      <a class="back-link" href="/compendium">Back to the compendium</a>
+      <a class="back-link" href="/">titosilversax.com</a>
       <span class="doc-label">Legal</span>
       <h1 class="doc-title">Privacy Policy</h1>
       <p class="doc-meta">Effective date: May 15, 2026 &nbsp;·&nbsp; titosilversax.com</p>
@@ -178,57 +186,75 @@
 
     <main class="doc-body">
 
-      <p>This Privacy Policy explains what information we collect when you visit titosilversax.com or purchase a digital product, how we use it, and what rights you have regarding your data.</p>
+      <p>This Privacy Policy explains what information we collect when you visit titosilversax.com, purchase a digital product, or engage with any services offered through this website, how we use it, and what rights you have regarding your data.</p>
 
       <h2>1. Who We Are</h2>
-      <p>This site is operated by Alberto Martir, professionally known as Tito Silversax, based in Cleveland, Ohio, USA. You can reach us at <a href="mailto:hello@titosilversax.com">hello@titosilversax.com</a>.</p>
+      <p>This site is operated by Alberto Martir, professionally known as Tito Silversax, based in Cleveland, Ohio, USA. You can reach us at <a href="mailto:hello@titosilversax.com">hello@titosilversax.com</a>. We operate across two offerings on this domain:</p>
+      <ul>
+        <li><strong>titosilversax.com/compendium</strong> — The Saxophonist's Compendium (digital book)</li>
+        <li><strong>titosilversax.com/titodreamingwithme</strong> — The Emotional Star Map suite and peer support services</li>
+      </ul>
 
       <h2>2. Information We Collect</h2>
-      <p><strong>Information you provide directly:</strong> When you make a purchase, you provide your name, email address, and payment details through our checkout provider, Kit (formerly ConvertKit). We receive your name and email; your payment card details are handled directly by Kit's payment processor and are never stored by us.</p>
-      <p><strong>Information collected automatically:</strong> When you visit this site, certain data is collected automatically through third-party tools (described below), including your IP address, browser type, pages visited, and general location. This data is used for analytics and advertising measurement purposes.</p>
+      <p><strong>Information you provide directly:</strong></p>
+      <ul>
+        <li>When you purchase The Saxophonist's Compendium through Kit (ConvertKit), you provide your name, email address, and payment details. We receive your name and email; your payment card information is handled directly by Kit's payment processor and is never stored by us.</li>
+        <li>When you purchase The Emotional Star Map: Songwriter's Edition through Gumroad, your name, email, and payment details are handled by Gumroad. We receive your name and email for order fulfillment.</li>
+        <li>When you request the free Emotional Star Map guide, you provide your email address through an opt-in form managed by Kit.</li>
+        <li>When you book or inquire about peer support services (The Deep Navigation, Modal Sound Sessions), you may provide your name, email, and any information you share in your message.</li>
+      </ul>
+      <p><strong>Information collected automatically:</strong> When you visit this site, certain data is collected automatically through third-party tools (described below), including your IP address, browser type, pages visited, and general location. This data is used for analytics and advertising measurement.</p>
 
       <h2>3. How We Use Your Information</h2>
       <ul>
-        <li>To deliver your purchased digital product via email</li>
+        <li>To deliver your purchased or requested digital product via email</li>
         <li>To send order confirmations and download links</li>
-        <li>To respond to support inquiries</li>
+        <li>To respond to support inquiries and service bookings</li>
         <li>To measure the effectiveness of our advertising (via Meta Pixel)</li>
-        <li>To analyze site traffic and visitor behavior (via Google Tag Manager)</li>
+        <li>To analyze site traffic and visitor behavior (via Google Analytics and Google Tag Manager)</li>
         <li>To send occasional emails about new products or updates, if you opt in</li>
       </ul>
       <p>We do not sell your personal information to third parties.</p>
 
       <h2>4. Third-Party Services</h2>
-      <p><strong>Kit (ConvertKit):</strong> We use Kit to process payments and deliver digital products. Your name and email address are stored in Kit's platform. Kit's privacy policy is available at <a href="https://kit.com/privacy" target="_blank" rel="noopener">kit.com/privacy</a>.</p>
+      <p><strong>Kit (ConvertKit):</strong> We use Kit to process payments for The Saxophonist's Compendium, deliver digital products, and manage email opt-ins including the free Emotional Star Map guide. Your name and email are stored in Kit's platform. Kit's privacy policy is available at <a href="https://kit.com/privacy" target="_blank" rel="noopener">kit.com/privacy</a>.</p>
+      <p><strong>Gumroad:</strong> We use Gumroad to sell and deliver The Emotional Star Map: Songwriter's Edition. Your name, email, and payment information are handled directly by Gumroad. Gumroad's privacy policy is available at <a href="https://gumroad.com/privacy" target="_blank" rel="noopener">gumroad.com/privacy</a>.</p>
       <p><strong>Meta Pixel (Facebook):</strong> We use the Meta Pixel to track page views and purchase events for advertising measurement on Facebook and Instagram. This may collect your IP address, browser information, and actions taken on this site. You can learn more at <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a>. To opt out of Meta's ad tracking, visit <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener">facebook.com/adpreferences</a>.</p>
-      <p><strong>Google Tag Manager:</strong> We use Google Tag Manager to manage analytics and tracking scripts on this site. Google Tag Manager itself does not collect personal data, but the tags it manages may. You can learn more at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p><strong>Google Analytics (GA4):</strong> We use Google Analytics to analyze visitor behavior and site performance. Google Analytics may collect your IP address (anonymized), browser type, pages visited, and session duration. You can learn more at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>. To opt out, install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+      <p><strong>Google Tag Manager:</strong> We use Google Tag Manager to manage analytics and tracking scripts on this site. Google Tag Manager itself does not collect personal data, but the tags it manages (including Google Analytics and Meta Pixel) may collect data as described above.</p>
+      <p><strong>Vercel Analytics:</strong> We use Vercel Analytics for privacy-friendly site traffic measurement. Vercel Analytics does not use cookies and does not collect personally identifiable information. You can learn more at <a href="https://vercel.com/docs/analytics/privacy-policy" target="_blank" rel="noopener">vercel.com/docs/analytics/privacy-policy</a>.</p>
 
-      <h2>5. Cookies &amp; Tracking</h2>
-      <p>This site uses cookies and similar tracking technologies placed by the third-party services described above (Meta Pixel, Google Tag Manager). These are used to measure advertising performance and site traffic. By using this site, you consent to the use of these cookies.</p>
+      <h2>5. Peer Support Services</h2>
+      <div class="notice">
+        <p>All peer support services (The Deep Navigation, Modal Sound Sessions) are provided by a state-certified peer support specialist, not a licensed therapist or medical professional. Any personal information you share during sessions is kept confidential and is not recorded or stored beyond session notes maintained for your care continuity. We do not share this information with third parties. If you are in crisis, please contact the 988 Suicide &amp; Crisis Lifeline by calling or texting <strong>988</strong>.</p>
+      </div>
+
+      <h2>6. Cookies &amp; Tracking</h2>
+      <p>This site uses cookies and similar tracking technologies placed by Meta Pixel, Google Analytics, and Google Tag Manager. These are used to measure advertising performance and site traffic. Vercel Analytics does not use cookies. By using this site, you consent to the use of cookies from the services described above.</p>
       <p>You can disable cookies through your browser settings, though this may affect the functionality of certain features.</p>
 
-      <h2>6. Data Retention</h2>
-      <p>We retain your email address and purchase records in Kit for as long as necessary to deliver your product, provide support, and comply with legal obligations. You may request deletion at any time by contacting us.</p>
+      <h2>7. Data Retention</h2>
+      <p>We retain your email address and purchase records in Kit and Gumroad for as long as necessary to deliver your product, provide support, and comply with legal obligations. You may request deletion at any time by contacting us. Session notes from peer support services are retained only as long as necessary to provide continuity of care and are deleted upon request.</p>
 
-      <h2>7. Your Rights</h2>
+      <h2>8. Your Rights</h2>
       <p>Depending on where you are located, you may have the following rights regarding your personal data:</p>
       <ul>
         <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
         <li><strong>Correction:</strong> Ask us to correct inaccurate data</li>
         <li><strong>Deletion:</strong> Request that we delete your personal data</li>
-        <li><strong>Opt-out of marketing:</strong> Unsubscribe from any marketing emails via the link in any email we send</li>
+        <li><strong>Opt-out of marketing:</strong> Unsubscribe from any marketing emails via the unsubscribe link in any email we send</li>
         <li><strong>California residents (CCPA):</strong> You have the right to know what personal information is collected, to request deletion, and to opt out of the sale of your information (we do not sell personal information)</li>
         <li><strong>EEA/UK residents (GDPR):</strong> You have additional rights including data portability and the right to lodge a complaint with your supervisory authority</li>
       </ul>
       <p>To exercise any of these rights, contact us at <a href="mailto:hello@titosilversax.com">hello@titosilversax.com</a>.</p>
 
-      <h2>8. Children's Privacy</h2>
+      <h2>9. Children's Privacy</h2>
       <p>This site is not directed at children under 13. We do not knowingly collect personal information from anyone under 13. If you believe we have inadvertently collected such information, please contact us and we will delete it promptly.</p>
 
-      <h2>9. Changes to This Policy</h2>
+      <h2>10. Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. We encourage you to review this page periodically.</p>
 
-      <h2>10. Contact</h2>
+      <h2>11. Contact</h2>
       <p>Questions or requests regarding this Privacy Policy should be directed to:<br>
       <a href="mailto:hello@titosilversax.com">hello@titosilversax.com</a></p>
 
@@ -237,12 +263,12 @@
     <footer class="doc-footer">
       <p>
         <a href="/compendium">The Saxophonist's Compendium</a> &nbsp;·&nbsp;
+        <a href="/titodreamingwithme">Tito Dreaming With Me</a> &nbsp;·&nbsp;
         <a href="/terms">Terms of Use</a><br>
         &copy; 2026 Alberto Martir / Tito Silversax. All rights reserved.
       </p>
     </footer>
 
   </div>
-
 </body>
 </html>
