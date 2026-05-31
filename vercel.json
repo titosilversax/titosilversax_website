@@ -1,15 +1,23 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/", "destination": "/titodreamingwithme", "permanent": false }
+    { "source": "/", "destination": "/titodreamingwithme", "permanent": false },
+    { "source": "/titodreamingwithme/privacy", "destination": "/privacy", "permanent": true },
+    { "source": "/titodreamingwithme/terms", "destination": "/terms", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/titodreamingwithme/assets/:path*", "destination": "/titodreamingwithme/assets/:path*" },
-    { "source": "/titodreamingwithme/privacy/:path*", "destination": "/titodreamingwithme/privacy/:path*" },
-    { "source": "/titodreamingwithme/terms/:path*", "destination": "/titodreamingwithme/terms/:path*" },
     { "source": "/titodreamingwithme/:path*", "destination": "/titodreamingwithme/index.html" }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
     {
       "source": "/images/(.*)",
       "headers": [
