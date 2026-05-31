@@ -7,13 +7,29 @@
   <meta name="description" content="A deep guide to harmonic physics, world tuning systems, sacred geometry, and spiritual practice for the serious saxophonist. By Tito Silversax (Alberto Martir). PDF & EPUB. $27.">
   <meta property="og:title" content="The Saxophonist's Compendium — Tito Silversax">
   <meta property="og:description" content="Everything I found after years of obsessive research into sound, tuning, and sacred practice. PDF & EPUB. $27.">
-  <meta property="og:image" content="https://titosilversax.com/images/compendium-cover.png">
+  <meta property="og:image" content="https://titosilversax.com/images/compendium-cover.jpg">
   <meta property="og:url" content="https://titosilversax.com/compendium">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- ============================================================
-       META PIXEL — replace 830210888742452 with your actual ID
-       ============================================================ -->
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="/images/compendium-cover.webp" type="image/webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Meta Pixel -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -30,23 +46,6 @@
     <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=830210888742452&ev=PageView&noscript=1"/>
   </noscript>
-
-  <!-- ============================================================
-       GOOGLE TAG MANAGER — replace GTM-XXXXXXX with your actual ID
-       ============================================================ -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-
-  <!-- Vercel Analytics -->
-  <script defer src="/_vercel/insights/script.js"></script>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -582,13 +581,17 @@
   <section class="hero">
     <div class="container">
       <div class="cover-wrap parallax" data-speed="0.04">
-        <img
-          class="cover-img"
-          src="/images/compendium-cover.jpg"
-          alt="The Saxophonist's Compendium book cover"
-          width="400"
-          height="520"
-        >
+        <picture>
+          <source srcset="/images/compendium-cover.webp" type="image/webp">
+          <img
+            class="cover-img"
+            src="/images/compendium-cover.jpg"
+            alt="The Saxophonist's Compendium book cover"
+            width="400"
+            height="520"
+            fetchpriority="high"
+          >
+        </picture>
       </div>
 
       <h1 class="hero-headline parallax" data-speed="0.02">The Saxophone is Not&nbsp;a&nbsp;Machine.<br>It's a Portal.</h1>
@@ -712,7 +715,10 @@
     <div class="container">
       <span class="section-label">A look inside</span>
       <div class="toc-wrap">
-        <img class="toc-img" src="/images/TOC.jpg" alt="Table of Contents — The Saxophonist's Compendium" width="560" loading="lazy">
+        <picture>
+          <source srcset="/images/TOC.webp" type="image/webp">
+          <img class="toc-img" src="/images/TOC.jpg" alt="Table of Contents — The Saxophonist's Compendium" width="560" loading="lazy">
+        </picture>
         <p class="toc-caption">Table of Contents</p>
       </div>
     </div>
