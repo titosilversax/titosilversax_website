@@ -1,0 +1,173 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "Tito Silversax" [ref=e3] [cursor=pointer]:
+      - /url: /titodreamingwithme/
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link "About" [ref=e6] [cursor=pointer]:
+          - /url: "#about"
+      - listitem [ref=e7]:
+        - link "Offerings" [ref=e8] [cursor=pointer]:
+          - /url: "#offerings"
+      - listitem [ref=e9]:
+        - link "The Compendium" [ref=e10] [cursor=pointer]:
+          - /url: /compendium
+      - listitem [ref=e11]:
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e15]:
+    - generic [ref=e16]: Tito Silversax · The Emotional Star Map
+    - heading "Write songs that sound exactly how you feel." [level=1] [ref=e17]:
+      - text: Write songs that sound
+      - emphasis [ref=e18]: exactly how you feel.
+    - paragraph [ref=e19]: Stop losing the feeling that sparked your song to safe chord patterns. Map your emotion directly to the music — no theory required.
+    - generic [ref=e20]:
+      - link "Get the Songwriter's Edition — $27" [ref=e21] [cursor=pointer]:
+        - /url: https://titosilversax.gumroad.com/l/thestarmap
+      - link "Get the Free Guide" [ref=e22] [cursor=pointer]:
+        - /url: https://titosilversax.kit.com/freeguide
+    - paragraph [ref=e23]: "\"Damn the rules — it's the feeling that counts.\""
+  - generic [ref=e27]:
+    - img "Tito with saxophone" [ref=e29]
+    - generic [ref=e30]:
+      - generic [ref=e31]: Peer Support · Modal Music
+      - heading "If music has ever felt like the only thing that understood you" [level=2] [ref=e32]
+      - paragraph [ref=e33]: You're in the right place.
+      - paragraph [ref=e34]: I'm Tito — a state-certified peer support specialist and saxophonist. I build quiet, modal soundscapes and honest conversations for people navigating heavy seasons.
+  - generic [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]: The Path
+      - heading "Choose Your Starting Point" [level=2] [ref=e40]
+    - paragraph [ref=e41]: Every tool here was built feeling-first — to help you write music that actually sounds like you.
+    - paragraph [ref=e42]: Available in English & Spanish · También en español
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]: Free Guide
+        - generic [ref=e46]: Digital Download
+        - heading "The Emotional Star Map" [level=3] [ref=e47]
+        - generic [ref=e48]: Free
+        - paragraph [ref=e49]: Delivered to your inbox
+        - paragraph [ref=e50]: The original 6-page guide to mapping seven emotional territories onto the musical modes. Includes the Quick-Start Process and The 4 Emotional Bridges. No music background needed — just honesty about how you feel.
+        - generic [ref=e51]: What's Included
+        - list [ref=e52]:
+          - listitem [ref=e53]: — 6-page digital guide
+          - listitem [ref=e54]: — The 7 Emotional Palettes mapped to modes
+          - listitem [ref=e55]: — The Quick-Start Process
+          - listitem [ref=e56]: — The 4 Emotional Bridges
+          - listitem [ref=e57]: — Journaling prompts for each mode
+          - listitem [ref=e58]: — No music background required
+        - link "Download Free Guide" [ref=e59] [cursor=pointer]:
+          - /url: https://titosilversax.kit.com/freeguide
+      - generic [ref=e60]:
+        - generic [ref=e61]: Recommended
+        - generic [ref=e62]: Emotional Processing System
+        - 'heading "The Emotional Star Map: Songwriter''s Edition" [level=3] [ref=e63]'
+        - generic [ref=e64]: $27
+        - paragraph [ref=e65]: One-time purchase
+        - paragraph [ref=e66]: The full system for turning a heavy feeling into a finished song. Everything you need to move from stuck to sonically honest.
+        - generic [ref=e67]: What's Included
+        - list [ref=e68]:
+          - listitem [ref=e69]: — The Processing Guide — structured emotional excavation
+          - listitem [ref=e70]: — Interactive Notion Workspace (duplicatable)
+          - listitem [ref=e71]: — Emotional Landscapes — map the color of your current state
+          - listitem [ref=e72]: — Transition Frameworks — move through heavy emotions safely
+          - listitem [ref=e73]: — 5 Structured Song Feeling Journal Sessions
+          - listitem [ref=e74]: — "Star Note" deep-dive for every palette
+          - listitem [ref=e75]: — Printable PDF Workbook (22 pages)
+          - listitem [ref=e76]: — Modal Listening Playlist & Chord Charts
+        - link "Get the Full System — $27" [ref=e77] [cursor=pointer]:
+          - /url: https://titosilversax.gumroad.com/l/thestarmap
+      - generic [ref=e78]:
+        - generic [ref=e79]: For Saxophonists
+        - generic [ref=e80]: Digital Book
+        - heading "The Saxophonist's Compendium" [level=3] [ref=e81]
+        - generic [ref=e82]: $27
+        - paragraph [ref=e83]: PDF & EPUB · Instant download
+        - paragraph [ref=e84]: 25,000 words on harmonic physics, microtonality, world tuning systems, sacred geometry, Kabbalah, and Sufism — all through the lens of the saxophone. You'll hear differently after this.
+        - generic [ref=e85]: What's Inside
+        - list [ref=e86]:
+          - listitem [ref=e87]: — The harmonic series & overtone practice
+          - listitem [ref=e88]: — Microtonality & alternate fingerings
+          - listitem [ref=e89]: — Arabic, Turkish, Persian & West African tuning systems
+          - listitem [ref=e90]: — Sacred geometry & the Fibonacci sequence
+          - listitem [ref=e91]: — Kabbalah & Sufism on sound as spiritual practice
+          - listitem [ref=e92]: — An integrated daily practice framework
+        - link "Get the Compendium — $27" [ref=e93] [cursor=pointer]:
+          - /url: /compendium
+  - generic [ref=e96]:
+    - generic [ref=e97]: The Journey
+    - heading "How We Work Together" [level=2] [ref=e98]
+    - generic [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]: "01"
+        - generic [ref=e102]:
+          - heading "Reach Out" [level=3] [ref=e103]
+          - paragraph [ref=e104]: Send me a voice memo on Instagram or drop me an email. Tell me what you're navigating and what you're hoping to find.
+      - generic [ref=e105]:
+        - generic [ref=e106]: "02"
+        - generic [ref=e107]:
+          - heading "We Map It" [level=3] [ref=e108]
+          - paragraph [ref=e109]: If we decide to work together, we'll map your emotional landscape and identify which modes and sounds resonate with your experience.
+      - generic [ref=e110]:
+        - generic [ref=e111]: "03"
+        - generic [ref=e112]:
+          - heading "Sound Meets You" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Through our sessions, the music becomes a container — a place to feel, process, and begin to move through what you're carrying.
+  - generic [ref=e117]:
+    - generic [ref=e118]: Questions
+    - heading "Frequently Asked" [level=2] [ref=e119]
+    - generic [ref=e120]:
+      - group [ref=e121]:
+        - generic "What is peer support, and how is it different from therapy? +" [ref=e122] [cursor=pointer]:
+          - text: What is peer support, and how is it different from therapy?
+          - generic [ref=e123]: +
+      - group [ref=e124]:
+        - generic "Do I need a music background to work with you? +" [ref=e125] [cursor=pointer]:
+          - text: Do I need a music background to work with you?
+          - generic [ref=e126]: +
+      - group [ref=e127]:
+        - generic "What are modal frameworks? +" [ref=e128] [cursor=pointer]:
+          - text: What are modal frameworks?
+          - generic [ref=e129]: +
+      - group [ref=e130]:
+        - generic "How does the sliding scale work? +" [ref=e131] [cursor=pointer]:
+          - text: How does the sliding scale work?
+          - generic [ref=e132]: +
+      - group [ref=e133]:
+        - generic "Can I combine offerings? +" [ref=e134] [cursor=pointer]:
+          - text: Can I combine offerings?
+          - generic [ref=e135]: +
+  - generic [ref=e138]:
+    - generic [ref=e139]: Get in touch
+    - heading "Let's talk." [level=2] [ref=e140]
+    - paragraph [ref=e141]: Whether you have questions, want to work together, or just want to say hi — I'd love to hear from you.
+    - link "hello@titosilversax.com" [ref=e142] [cursor=pointer]:
+      - /url: mailto:hello@titosilversax.com
+  - contentinfo [ref=e143]:
+    - generic [ref=e144]:
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - generic [ref=e147]: Tito Silversax
+          - paragraph [ref=e148]: Healing guidance through music, peer support, and lived experience.
+        - generic [ref=e150]:
+          - link "YouTube" [ref=e151] [cursor=pointer]:
+            - /url: https://youtube.com/@titosilversax
+          - link "Instagram" [ref=e152] [cursor=pointer]:
+            - /url: https://instagram.com/titosilversax
+          - link "Bandcamp" [ref=e153] [cursor=pointer]:
+            - /url: https://titosilversax.bandcamp.com/
+        - generic [ref=e155]:
+          - link "Offerings" [ref=e156] [cursor=pointer]:
+            - /url: "#offerings"
+          - link "Sessions" [ref=e157] [cursor=pointer]:
+            - /url: "#services"
+          - link "Contact" [ref=e158] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Privacy" [ref=e159] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=e160] [cursor=pointer]:
+            - /url: /terms
+      - paragraph [ref=e162]:
+        - link "hello@titosilversax.com" [ref=e163] [cursor=pointer]:
+          - /url: mailto:hello@titosilversax.com
+        - text: · This is peer support, not therapy or medical treatment. · © 2026 Tito Silversax

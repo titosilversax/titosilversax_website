@@ -1,12 +1,14 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/", "destination": "/titodreamingwithme", "permanent": false },
+    { "source": "/", "destination": "/home", "permanent": false },
+    { "source": "/titodreamingwithme", "destination": "/home", "permanent": true },
+    { "source": "/titodreamingwithme/:path*", "destination": "/home/:path*", "permanent": true },
     { "source": "/titodreamingwithme/privacy", "destination": "/privacy", "permanent": true },
     { "source": "/titodreamingwithme/terms", "destination": "/terms", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/titodreamingwithme/:path*", "destination": "/titodreamingwithme/index.html" }
+    { "source": "/home/:path*", "destination": "/home/index.html" }
   ],
   "headers": [
     {

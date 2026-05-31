@@ -1,0 +1,103 @@
+- generic [active] [ref=e1]:
+  - link "← Tito Silversax" [ref=e2] [cursor=pointer]:
+    - /url: /
+  - generic [ref=e4]:
+    - img "The Saxophonist's Compendium book cover" [ref=e7]
+    - heading "The Saxophone is Not a Machine. It's a Portal." [level=1] [ref=e8]:
+      - text: The Saxophone is Not a Machine.
+      - text: It's a Portal.
+    - paragraph [ref=e9]: The spaces between the keys — that's where the portal opens.
+    - generic [ref=e10]:
+      - link "Unlock the Portal — $27" [ref=e11] [cursor=pointer]:
+        - /url: https://titosilversax.gumroad.com/l/saxCompendium?wanted=true
+      - paragraph [ref=e12]: PDF & EPUB · Instant download · No DRM
+      - paragraph [ref=e13]:
+        - link "Not ready? Get the free Sacred Listening guide →" [ref=e14] [cursor=pointer]:
+          - /url: https://titosilversax.kit.com/sacredlistening
+  - generic [ref=e18]:
+    - paragraph [ref=e19]: I'm Tito Silversax, saxophonist based in Cleveland, Ohio.
+    - paragraph [ref=e20]: I dove deep into the worlds between the music notes. Here's what I found.
+  - generic [ref=e23]:
+    - generic [ref=e24]: Who this is for
+    - heading "You, if any of this sounds familiar." [level=2] [ref=e25]
+    - list [ref=e26]:
+      - listitem [ref=e27]: — You’ve outgrown the lesson books, but you don’t know where to go next.
+      - listitem [ref=e28]: — You can hear something in the music that you can’t name yet — and you want to name it.
+      - listitem [ref=e29]: — You suspect the saxophone is capable of more than twelve-tone temperament allows.
+      - listitem [ref=e30]:
+        - text: — You practice daily, but you’re hungry for a deeper
+        - emphasis [ref=e31]: why
+        - text: behind every note.
+  - generic [ref=e34]:
+    - generic [ref=e35]: What's inside
+    - heading "Six territories. One integrated map." [level=2] [ref=e36]:
+      - text: Six territories.
+      - text: One integrated map.
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]: I
+        - generic [ref=e40]:
+          - heading "The Harmonic Series" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Your horn is already playing everything. You just can't hear it yet.
+      - generic [ref=e43]:
+        - generic [ref=e44]: II
+        - generic [ref=e45]:
+          - heading "Microtonality & Alternate Fingerings" [level=3] [ref=e46]
+          - paragraph [ref=e47]: The notes between the notes — a prismatic palette hidden in plain sight.
+      - generic [ref=e48]:
+        - generic [ref=e49]: III
+        - generic [ref=e50]:
+          - heading "World Tuning Systems" [level=3] [ref=e51]
+          - paragraph [ref=e52]: Arabic, Turkish, Persian, West African. What happens when you follow the harmonic series all the way.
+      - generic [ref=e53]:
+        - generic [ref=e54]: IV
+        - generic [ref=e55]:
+          - heading "Sacred Geometry" [level=3] [ref=e56]
+          - paragraph [ref=e57]: The Fibonacci sequence. The Golden Ratio. The same mathematics lives in your music.
+      - generic [ref=e58]:
+        - generic [ref=e59]: V
+        - generic [ref=e60]:
+          - heading "Kabbalah & Sufism" [level=3] [ref=e61]
+          - paragraph [ref=e62]: Two traditions built entire philosophies around sound. Here's what they understood.
+      - generic [ref=e63]:
+        - generic [ref=e64]: VI
+        - generic [ref=e65]:
+          - heading "An Integrated Practice" [level=3] [ref=e66]
+          - paragraph [ref=e67]: Long tones as meditation. Intonation as prayer. Playing as a portal.
+  - generic [ref=e70]:
+    - generic [ref=e71]: A look inside
+    - generic [ref=e72]:
+      - img "Table of Contents — The Saxophonist's Compendium" [ref=e74]
+      - paragraph [ref=e75]: Table of Contents
+  - generic [ref=e78]:
+    - generic [ref=e79]: Community
+    - heading "Explore this together." [level=2] [ref=e80]
+    - paragraph [ref=e81]: Join a small circle of musicians diving deeper into sound, practice, and presence. It’s free — and it’s where the conversation continues.
+    - paragraph [ref=e82]:
+      - link "Join the Meditative Musicians community on Skool →" [ref=e83] [cursor=pointer]:
+        - /url: https://www.skool.com/meditative-musicians-6593/about
+  - generic [ref=e87]:
+    - paragraph [ref=e88]: The Saxophonist's Compendium
+    - generic [ref=e89]: $27
+    - paragraph [ref=e90]:
+      - text: PDF & EPUB · Instant digital download
+      - text: No subscription · No DRM · Yours to keep
+    - link "Enter the Portal — $27" [ref=e92] [cursor=pointer]:
+      - /url: https://titosilversax.gumroad.com/l/saxCompendium?wanted=true
+    - paragraph [ref=e93]:
+      - link "Not ready? Get the free Sacred Listening guide →" [ref=e94] [cursor=pointer]:
+        - /url: https://titosilversax.kit.com/sacredlistening
+  - contentinfo [ref=e95]:
+    - paragraph [ref=e97]:
+      - text: Secure checkout via Gumroad · Questions?
+      - link "hello@titosilversax.com" [ref=e98] [cursor=pointer]:
+        - /url: mailto:hello@titosilversax.com
+      - link "Terms of Use" [ref=e99] [cursor=pointer]:
+        - /url: /terms
+      - text: ·
+      - link "Privacy Policy" [ref=e100] [cursor=pointer]:
+        - /url: /privacy
+      - text: ·
+      - link "Community" [ref=e101] [cursor=pointer]:
+        - /url: https://www.skool.com/meditative-musicians-6593/about
+      - text: © 2026 Alberto Martir / Tito Silversax. All rights reserved.
