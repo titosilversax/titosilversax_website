@@ -903,6 +903,25 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 639px) {
+      .nav { padding: 16px 20px; }
+      .nav-links { gap: 20px; }
+      .nav-links .nav-hide-mobile { display: none; }
+      .hero { padding: 100px 0 60px; }
+      .hero-title { font-size: clamp(2rem, 9vw, 3rem); }
+      .section { padding: 60px 0; }
+      .container { padding: 0 20px; }
+      .container--wide { padding: 0 20px; }
+      .offerings-grid { gap: 20px; }
+      .card { padding: 28px 20px; }
+      .process-grid { gap: 20px; }
+      .process-item { padding: 28px 20px; }
+      .services-grid { gap: 20px; }
+      .service-card { padding: 32px 20px; }
+      .contact { padding: 60px 0; }
+      .footer { padding: 48px 0 40px; }
+    }
+
     @media (min-width: 640px) {
       .offerings-grid { grid-template-columns: 1fr 1fr; }
       .services-grid  { grid-template-columns: 1fr 1fr; }
@@ -930,7 +949,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#offerings">Offerings</a></li>
-      <li><a href="/compendium">The Compendium</a></li>
+      <li class="nav-hide-mobile"><a href="/compendium">The Compendium</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
