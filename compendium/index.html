@@ -450,6 +450,21 @@
     }
 
     /* ── FOOTER ── */
+    .site-back {
+      position: fixed;
+      top: 20px;
+      left: 24px;
+      z-index: 100;
+      font-size: 0.75rem;
+      font-family: var(--ff-body);
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-back:hover { color: var(--text); }
+
     .footer {
       padding: 48px 0 80px;
       text-align: center;
@@ -555,6 +570,8 @@
 
   <!-- Vignette -->
   <div class="vignette"></div>
+
+  <a class="site-back" href="/">← Tito Silversax</a>
 
   <!-- GTM noscript — replace GTM-XXXXXXX -->
   <noscript>
