@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Contemplative Music Practice in a Box — Tito Silversax</title>
+  <meta name="description" content="Ten modal journeys, ten 30-minute drone soundscapes, one five-movement ritual. A contemplative practice for improvising musicians. By Tito Silversax. $97.">
+  <meta property="og:title" content="A Contemplative Music Practice in a Box — Tito Silversax">
+  <meta property="og:description" content="A practice, the way meditation is a practice. Ten modal journeys over living drones, twenty to thirty minutes at a time. $97.">
+  <meta property="og:image" content="https://titosilversax.com/images/background.png">
+  <meta property="og:url" content="https://titosilversax.com/practice">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Kit Commerce -->
+  <script src="https://titosilversax.kit.com/commerce.js" async defer></script>
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '830210888742452');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=830210888742452&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #06070f;
+      --surface:     #0b0e1c;
+      --surface-2:   #111829;
+      --gold:        #c9963a;
+      --gold-bright: #e8b94f;
+      --gold-glow:   rgba(201, 150, 58, 0.22);
+      --text:        #c8d2e6;
+      --text-muted:  #7a8bb0;
+      --divider:     rgba(139, 92, 246, 0.12);
+      --ff-head:     'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --ff-body:     'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Vignette overlay */
+    .vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      pointer-events: none;
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, transparent 40%, rgba(6,7,15,0.55) 100%);
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image: url('/images/background.webp?v=2');
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      opacity: 0;
+      animation: pageEnter 1.2s ease-out 0.3s forwards;
+    }
+
+    @keyframes pageEnter {
+      to { opacity: 1; }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-d1 { transition-delay: 0.12s; }
+    .reveal-d2 { transition-delay: 0.24s; }
+    .reveal-d3 { transition-delay: 0.36s; }
+    .reveal-d4 { transition-delay: 0.48s; }
+    .reveal-d5 { transition-delay: 0.60s; }
+
+    /* LAYOUT */
+    .container {
+      width: 100%;
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 140px 0 48px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--ff-body);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .hero-headline {
+      font-family: var(--ff-head);
+      font-size: clamp(2.2rem, 6.5vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      background: linear-gradient(90deg, #f0f2f8 0%, #e8d5a8 25%, #f0f2f8 50%, #c8b8e8 75%, #f0f2f8 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 8s linear infinite;
+    }
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+
+    .hero-sub {
+      font-family: var(--ff-head);
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-style: italic;
+      font-weight: 300;
+      color: #a8b8d8;
+      max-width: 520px;
+      margin: 0 auto 44px;
+      line-height: 1.55;
+    }
+
+    /* ── CTA BUTTON ── */
+    .cta-wrap {
+      text-align: center;
+      margin: 8px 0;
+    }
+
+    .convertkit-button,
+    a.convertkit-button {
+      display: inline-block !important;
+      background: linear-gradient(135deg, #b8862e 0%, #e0ac48 50%, #b8862e 100%) !important;
+      background-size: 200% 100% !important;
+      color: #0b0a06 !important;
+      font-family: var(--ff-body) !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.04em !important;
+      text-decoration: none !important;
+      padding: 16px 36px !important;
+      border-radius: 3px !important;
+      border: none !important;
+      cursor: pointer !important;
+      transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.15s ease !important;
+      box-shadow: 0 0 28px var(--gold-glow), 0 4px 16px rgba(0,0,0,0.4) !important;
+      width: 100% !important;
+      max-width: 360px !important;
+      text-align: center !important;
+      animation: btnBreathe 4s ease-in-out infinite;
+    }
+
+    @keyframes btnBreathe {
+      0%, 100% { box-shadow: 0 0 24px var(--gold-glow), 0 4px 16px rgba(0,0,0,0.4); }
+      50%      { box-shadow: 0 0 40px rgba(201,150,58,0.35), 0 4px 16px rgba(0,0,0,0.4); }
+    }
+
+    .convertkit-button:hover,
+    a.convertkit-button:hover {
+      background-position: 100% 0 !important;
+      box-shadow: 0 0 44px var(--gold-glow), 0 6px 24px rgba(0,0,0,0.5) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    .cta-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 12px 0; }
+
+    .section-label {
+      font-family: var(--ff-body);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .section-heading {
+      font-family: var(--ff-head);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.25;
+      color: #eef1fb;
+      margin-bottom: 28px;
+      letter-spacing: 0.01em;
+      position: relative;
+      padding-left: 20px;
+    }
+    .section-heading::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    .section-body {
+      color: var(--text);
+      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+      line-height: 1.9;
+    }
+
+    .section-body p + p { margin-top: 22px; }
+
+    .section-body em {
+      font-style: italic;
+      color: #b0c0e0;
+    }
+
+    /* ── RITUAL / INSIDE LISTS ── */
+    .inside-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .inside-item {
+      padding: 32px 0;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.06);
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: background 0.5s ease;
+      border-radius: 6px;
+      margin: 0 -12px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .inside-item:hover {
+      background: rgba(139, 92, 246, 0.035);
+    }
+
+    .inside-item:last-child { border-bottom: none; }
+
+    .inside-numeral {
+      font-family: var(--ff-head);
+      font-size: 1.4rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(139, 92, 246, 0.35);
+      line-height: 1.3;
+      padding-top: 2px;
+      transition: color 0.5s ease;
+    }
+
+    .inside-item:hover .inside-numeral {
+      color: rgba(201, 150, 58, 0.65);
+    }
+
+    .inside-title {
+      font-family: var(--ff-head);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #dde4f2;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .inside-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* ── WHO IS THIS FOR ── */
+    .for-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+    }
+
+    .for-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 14px;
+      font-size: 0.97rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .for-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 300;
+      opacity: 0.5;
+    }
+
+    /* ── FAQ ── */
+    details.faq-item {
+      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+    }
+
+    details.faq-item:first-of-type {
+      border-top: 1px solid rgba(139, 92, 246, 0.12);
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #dde4f2;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::marker { display: none; }
+    details.faq-item summary:hover { color: #eef1fb; }
+
+    .faq-icon {
+      flex-shrink: 0;
+      font-family: var(--ff-body);
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      width: 20px;
+      text-align: center;
+      transition: transform 0.25s;
+    }
+
+    details[open].faq-item .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 0 22px;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    /* ── PRICE BLOCK ── */
+    .price-block {
+      background: linear-gradient(135deg, rgba(11,14,28,0.7) 0%, rgba(15,20,40,0.5) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.10);
+      border-radius: 8px;
+      padding: 52px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-block::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(76, 29, 149, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .price-product-name {
+      font-family: var(--ff-head);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #eef1fb;
+      margin-bottom: 4px;
+    }
+
+    .price-amount {
+      font-family: var(--ff-head);
+      font-size: clamp(2.8rem, 9vw, 4rem);
+      font-weight: 600;
+      line-height: 1;
+      color: var(--gold-bright);
+      margin: 20px 0 8px;
+    }
+
+    .price-details {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    .site-back {
+      position: fixed;
+      top: 16px;
+      left: 20px;
+      z-index: 100;
+      text-decoration: none;
+      display: block;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+
+    .site-back img { display: block; height: 120px; width: auto; }
+    .site-back:hover { opacity: 1; }
+
+    .footer {
+      padding: 48px 0 80px;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.78rem;
+      color: rgba(136, 152, 184, 0.45);
+      line-height: 1.8;
+    }
+
+    .footer-text a {
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(136, 152, 184, 0.25);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .footer-text a:hover {
+      color: var(--text);
+      border-color: rgba(136, 152, 184, 0.5);
+    }
+
+    /* ── GOLD LINE DRAW SEPARATOR ── */
+    .gold-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 80px 0;
+      height: 1px;
+      position: relative;
+    }
+    .gold-line::before {
+      content: '';
+      width: 0%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,150,58,0.3), transparent);
+      transition: width 1.2s ease-out;
+    }
+    .gold-line.visible::before {
+      width: 100%;
+    }
+    .gold-line::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(201,150,58,0.5);
+      opacity: 0;
+      transition: opacity 0.6s ease 0.8s;
+    }
+    .gold-line.visible::after {
+      opacity: 1;
+    }
+
+    /* ── TEXT SELECTION ── */
+    ::selection {
+      background: rgba(201, 150, 58, 0.25);
+      color: #f0f2f8;
+    }
+    ::-moz-selection {
+      background: rgba(201, 150, 58, 0.25);
+      color: #f0f2f8;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 599px) {
+      .hero { padding: 110px 0 32px; }
+      .container { padding: 0 20px; }
+      .price-block { padding: 36px 20px; }
+      .inside-item { gap: 16px; padding: 24px 0; }
+      .hero-sub { margin-bottom: 32px; }
+      .site-back { top: 12px; left: 16px; }
+      .site-back img { height: 96px; }
+      .gold-line { margin: 56px 0; }
+    }
+
+    @media (min-width: 600px) {
+      .container { padding: 0 32px; }
+      .inside-item { margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+    }
+
+    @media (min-width: 768px) {
+      .hero { padding: 160px 0 64px; }
+      .price-block { padding: 64px 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vignette -->
+  <div class="vignette"></div>
+
+  <a class="site-back" href="/">
+    <img src="/images/logo.webp" alt="Tito Silversax" width="120" height="120">
+  </a>
+
+  <!-- GTM noscript — replace GTM-XXXXXXX -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">Tito Silversax &nbsp;·&nbsp; For Improvising Musicians</span>
+
+      <h1 class="hero-headline">Practice as Ritual.</h1>
+
+      <p class="hero-sub">
+        A practice, the way meditation is a practice. Ten modal journeys
+        over living drones, twenty to thirty minutes at a time.
+      </p>
+
+      <div class="cta-wrap">
+        <a class="convertkit-button" href="https://titosilversax.kit.com/products/a-contemplative-music-practice-in-a" data-commerce>Begin the Practice — $97</a>
+        <p class="cta-note">66-page guide + 10 drone tracks &nbsp;·&nbsp; Instant digital download</p>
+        <p style="margin-top: 16px; font-size: 0.82rem;">
+          <a href="https://titosilversax.kit.com/sacredlistening" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; border-bottom: 1px solid rgba(136,152,184,0.25); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s;">Not ready? Get the free Sacred Listening guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       INTRO
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="section-body">
+        <p>I'm Tito Silversax, saxophonist based in Cleveland, Ohio.</p>
+        <p>
+          Somewhere between the scale sheets and the metronome, most of us lose
+          the thing that made us pick up the instrument. I built this practice
+          to find it again. It has no assignments, no grades, and no technique
+          to master. You sit down, the drone starts, and you play.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       WHO IS THIS FOR
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <span class="section-label">Who this is for</span>
+      <h2 class="section-heading">You, if any of this sounds familiar.</h2>
+      <ul class="for-list">
+        <li>You improvise, but lately every solo comes out sounding like the last one.</li>
+        <li>Practice has started to feel like a chore you owe someone.</li>
+        <li>You want playing to feed your inner life the way it feeds your technique.</li>
+        <li>You have thirty minutes and an instrument, and you want those minutes to mean something.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       THE RITUAL
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <span class="section-label">The ritual</span>
+      <h2 class="section-heading">Five movements.<br>Twenty to thirty minutes.</h2>
+
+      <div class="inside-grid">
+
+        <div class="inside-item reveal reveal-d1">
+          <span class="inside-numeral">I</span>
+          <div>
+            <h3 class="inside-title">Settle</h3>
+            <p class="inside-desc">Arrive before you play. Breath, posture, and a moment of silence before the first sound.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d2">
+          <span class="inside-numeral">II</span>
+          <div>
+            <h3 class="inside-title">Listen</h3>
+            <p class="inside-desc">Start the drone. Let your ear tune to it before your hands do anything.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d3">
+          <span class="inside-numeral">III</span>
+          <div>
+            <h3 class="inside-title">Visualize</h3>
+            <p class="inside-desc">Each journey opens with a guided visualization: a landscape to play from, drawn from the character of the mode.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d4">
+          <span class="inside-numeral">IV</span>
+          <div>
+            <h3 class="inside-title">Play</h3>
+            <p class="inside-desc">Improvise inside the mode over the drone. Nothing to get right, nowhere to arrive. The in-session invitations keep you exploring.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d5">
+          <span class="inside-numeral">V</span>
+          <div>
+            <h3 class="inside-title">Reflect</h3>
+            <p class="inside-desc">Reflection questions close each session, so you carry something off the horn and into your day.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT'S INSIDE
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <span class="section-label">What's in the box</span>
+      <h2 class="section-heading">Everything the practice needs. Nothing it doesn't.</h2>
+
+      <div class="inside-grid">
+
+        <div class="inside-item reveal reveal-d1">
+          <span class="inside-numeral">I</span>
+          <div>
+            <h3 class="inside-title">The 66-Page Practice Guide</h3>
+            <p class="inside-desc">Ten modal journeys. Each one pairs a visualization, a musical map, in-session invitations, and reflection questions.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d2">
+          <span class="inside-numeral">II</span>
+          <div>
+            <h3 class="inside-title">Ten Drone Soundscapes</h3>
+            <p class="inside-desc">Full 30-minute, seamlessly looping drone tracks, one tuned to each journey. Press play and the room changes.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d3">
+          <span class="inside-numeral">III</span>
+          <div>
+            <h3 class="inside-title">The Five-Movement Ritual</h3>
+            <p class="inside-desc">Settle, Listen, Visualize, Play, Reflect. A repeatable container that meets you differently every time you return to it.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d4">
+          <span class="inside-numeral">IV</span>
+          <div>
+            <h3 class="inside-title">Transposition Guide</h3>
+            <p class="inside-desc">Every journey mapped for B♭ and E♭ instruments, so saxophonists, trumpeters, and clarinetists can play straight from the page.</p>
+          </div>
+        </div>
+
+        <div class="inside-item reveal reveal-d5">
+          <span class="inside-numeral">V</span>
+          <div>
+            <h3 class="inside-title">Triad Pair Appendix</h3>
+            <p class="inside-desc">Harmonic material for the days you want to go deeper into each mode.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <span class="section-label">Questions</span>
+      <h2 class="section-heading">Before you ask.</h2>
+
+      <details class="faq-item">
+        <summary>Is this a course? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          No. A course ends. This is a practice, the way meditation is a practice.
+          You return to the same ten journeys and they meet you differently each time.
+          There are no assignments, no grades, and no technique to master.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What instruments does it work for? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          Any instrument you can improvise on. The guide is written in concert pitch
+          and includes a full transposition guide for B♭ and E♭ instruments.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How much theory do I need? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          If you can find the notes of a scale on your instrument, you have enough.
+          Each journey gives you a musical map to play from, and the triad pair
+          appendix is there when you want more harmonic depth.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How is this delivered? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          Instant digital download through Kit: the 66-page guide plus all ten
+          30-minute drone tracks. Yours to keep, on any device.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       COMMUNITY
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container" style="text-align:center;">
+      <span class="section-label">Community</span>
+      <h2 class="section-heading" style="margin-bottom: 14px;">Practice alongside others.</h2>
+      <p class="section-body" style="max-width: 520px; margin: 0 auto 20px; font-size: 0.98rem;">
+        Join a small circle of musicians diving deeper into sound, practice, and presence.
+        It's free. Come keep the conversation going.
+      </p>
+      <p style="margin: 0;">
+        <a href="https://www.skool.com/meditative-musicians-6593/about" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,150,58,0.35); padding-bottom: 2px; font-size: 0.92rem; transition: color 0.2s, border-color 0.2s;">Join the Meditative Musicians community on Skool →</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       PRICE + CTA
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="price-block">
+        <p class="price-product-name">A Contemplative Music Practice in a Box</p>
+        <div class="price-amount">$97</div>
+        <p class="price-details">
+          66-page guide &nbsp;·&nbsp; 10 full-length drone soundscapes<br>
+          Instant digital download &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; Yours to keep
+        </p>
+        <div class="cta-wrap">
+          <a class="convertkit-button" href="https://titosilversax.kit.com/products/a-contemplative-music-practice-in-a" data-commerce>Begin the Practice — $97</a>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.82rem; text-align: center;">
+          <a href="https://titosilversax.kit.com/sacredlistening" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; border-bottom: 1px solid rgba(136,152,184,0.25); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s;">Not ready? Get the free Sacred Listening guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="footer reveal">
+    <div class="container">
+      <p class="footer-text">
+        Secure checkout via Kit &nbsp;·&nbsp;
+        Questions? <a href="mailto:hello@titosilversax.com">hello@titosilversax.com</a><br>
+        <a href="/terms">Terms of Use</a> &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="https://www.skool.com/meditative-musicians-6593/about" target="_blank" rel="noopener">Community</a><br>
+        &copy; 2026 Alberto Martir / Tito Silversax. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll reveal + gold line observer -->
+  <script>
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal, .gold-line').forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
