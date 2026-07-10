@@ -527,6 +527,42 @@
       color: #f0f2f8;
     }
 
+    /* ── TESTIMONIAL ── */
+    .testimonial {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .testimonial-quote {
+      font-family: var(--ff-head);
+      font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #dde4f2;
+      position: relative;
+      padding: 0 8px;
+    }
+
+    .testimonial-quote::before {
+      content: '\201C';
+      display: block;
+      font-size: 3.2rem;
+      line-height: 1;
+      color: rgba(201, 150, 58, 0.55);
+      margin-bottom: 8px;
+    }
+
+    .testimonial-attr {
+      margin-top: 20px;
+      font-family: var(--ff-body);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
     /* ── GOLD LINE DRAW SEPARATOR ── */
     .gold-line {
       display: flex;
@@ -754,6 +790,23 @@
       <p style="margin: 0;">
         <a href="https://www.skool.com/meditative-musicians-6593/about" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,150,58,0.35); padding-bottom: 2px; font-size: 0.92rem; transition: color 0.2s, border-color 0.2s;">Join the Meditative Musicians community on Skool →</a>
       </p>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIAL
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <figure class="testimonial">
+        <blockquote class="testimonial-quote">
+          Went into a different world of sound. You have opened my mind up,
+          and now I want to see where I can take it&hellip; thank you.
+        </blockquote>
+        <figcaption class="testimonial-attr">A Compendium reader</figcaption>
+      </figure>
     </div>
   </section>
 
