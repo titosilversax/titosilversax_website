@@ -527,6 +527,57 @@
       color: #f0f2f8;
     }
 
+    /* ── FAQ ── */
+    details.faq-item {
+      border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+    }
+
+    details.faq-item:first-of-type {
+      border-top: 1px solid rgba(139, 92, 246, 0.12);
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--ff-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #dde4f2;
+      gap: 16px;
+      transition: color 0.2s;
+    }
+
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::marker { display: none; }
+    details.faq-item summary:hover { color: #eef1fb; }
+
+    .faq-icon {
+      flex-shrink: 0;
+      font-family: var(--ff-body);
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      width: 20px;
+      text-align: center;
+      transition: transform 0.25s;
+    }
+
+    details[open].faq-item .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 0 22px;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
     /* ── TESTIMONIAL ── */
     .testimonial {
       text-align: center;
@@ -647,7 +698,8 @@
       <h1 class="hero-headline parallax" data-speed="0.02">The Saxophone<br>is a Portal.</h1>
 
       <p class="hero-sub parallax" data-speed="0.01">
-        It opens in the spaces between the keys.
+        It opens in the spaces between the keys. 25,000 words on the physics,
+        world tunings, and sacred traditions hiding inside your horn.
       </p>
 
       <div class="cta-wrap">
@@ -663,13 +715,43 @@
   <div class="gold-line"></div>
 
   <!-- ═══════════════════════════════════════════
+       THE PLATEAU
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <span class="section-label">The plateau</span>
+      <h2 class="section-heading">You can play everything they gave you. So why does something still feel missing?</h2>
+      <div class="section-body">
+        <p>
+          You did the scale sheets. You transcribed the solos. Your technique
+          keeps improving, and your playing keeps sounding&hellip; fine.
+        </p>
+        <p>
+          The standard lesson canon hands every saxophonist the same twelve
+          notes and calls it complete. It skips the overtones your horn
+          produces on every note, the tunings half the world plays in, and
+          centuries of thought about what sound does to a human being.
+          I spent years gathering that missing material. This book is it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
        INTRO
        ═══════════════════════════════════════════ -->
   <section class="section reveal">
     <div class="container">
       <div class="section-body">
         <p>I'm Tito Silversax, saxophonist based in Cleveland, Ohio.</p>
-        <p>I dove deep into the worlds between the music notes. Here's what I found.</p>
+        <p>
+          For years I chased a sound I could hear but couldn't name. The
+          search led through harmonic physics, Arabic and Persian tuning
+          systems, sacred geometry, Kabbalah, and Sufism. Here's what I found,
+          organized so you can use it in tomorrow's practice session.
+        </p>
       </div>
     </div>
   </section>
@@ -771,6 +853,54 @@
         </picture>
         <p class="toc-caption">Table of Contents</p>
       </div>
+    </div>
+  </section>
+
+  <div class="gold-line"></div>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════ -->
+  <section class="section reveal">
+    <div class="container">
+      <span class="section-label">Questions</span>
+      <h2 class="section-heading">Before you ask.</h2>
+
+      <details class="faq-item">
+        <summary>Do I need advanced theory? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          No. If you can play your scales, you can use this book. The physics
+          and the math start from zero, and every concept comes with fingerings
+          or exercises that let you hear it on the horn instead of taking my
+          word for it.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is this only for saxophonists? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          The ideas — harmonic series, microtonality, world tunings — apply to
+          any wind instrument. The examples, fingerings, and overtone exercises
+          assume a saxophone in your hands.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How mystical does it get? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          The Kabbalah and Sufism chapters are history and philosophy, and
+          belief is never required. Read them as a musicologist or as a mystic;
+          the daily practice framework works either way.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What exactly do I get? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">
+          A 25,000-word digital book in PDF and EPUB, delivered instantly
+          through Gumroad. No DRM, no subscription, yours to keep on any device.
+        </p>
+      </details>
     </div>
   </section>
 
