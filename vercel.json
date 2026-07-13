@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/", "destination": "/home", "permanent": false },
+    { "source": "/offerings", "destination": "/offers", "permanent": true },
     { "source": "/titodreamingwithme", "destination": "/home", "permanent": true },
     { "source": "/titodreamingwithme/:path*", "destination": "/home/:path*", "permanent": true },
     { "source": "/titodreamingwithme/privacy", "destination": "/privacy", "permanent": true },
