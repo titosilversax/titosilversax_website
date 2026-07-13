@@ -914,10 +914,11 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 639px) {
-      .nav { padding: 16px 20px; }
+      .nav { padding: 10px 16px; }
+      .nav-logo img { height: 68px; }
       .nav-links { gap: 20px; }
       .nav-links .nav-hide-mobile { display: none; }
-      .hero { padding: 100px 0 60px; }
+      .hero { min-height: auto; padding: 120px 0 56px; }
       .hero-title { font-size: clamp(2rem, 9vw, 3rem); }
       .section { padding: 60px 0; }
       .container { padding: 0 20px; }
@@ -937,6 +938,10 @@
       .services-grid  { grid-template-columns: 1fr 1fr; }
       .process-grid   { grid-template-columns: 1fr; }
       .footer-grid    { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 767px) {
+      .about-img-wrap { order: 2; }
     }
 
     @media (min-width: 768px) {
